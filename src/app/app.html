@@ -1,101 +1,69 @@
 <header id="master-nav">
   <div class="container nav-content">
     <div class="branding">
-      <span class="branding-name">Jose Sojo</span>
-      <span class="branding-title">Web Architect</span>
+      <span class="branding-name">JoseSojo.</span>
     </div>
     
     <nav style="display: flex; align-items: center;">
       <ul class="nav-links">
-        <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
-        <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
-        <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
+        <li><a href="#skills">Features</a></li>
+        <li><a href="#portfolio">Works</a></li>
+        <li><a href="#about">Philosophy</a></li>
       </ul>
-      <div class="language-selector">
-        <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-        <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
-      </div>
-      <a href="#contact" class="contact-btn">{{ 'NAV.CONTACT' | translate }}</a>
+      <a href="#contact" class="contact-pill">Contact Us</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero White Canvas -->
-  <section class="hero-section">
+  <!-- Hero Section - Deep AirLume Style -->
+  <section class="hero-deep">
+    <div class="hero-aura"></div>
     <div class="container">
-      <h1 class="hero-title" [innerHTML]="'HERO.TITLE' | translate"></h1>
-      <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
+      <span class="hero-chip">Fly Smarter With Architect</span>
+      <h1 class="hero-title">High Performance Engineering For Modern Platforms</h1>
+      <p class="hero-desc">Building resilient digital architectures with a focus on scalability, modern engineering, and cutting-edge user experiences.</p>
       
-      <div class="hero-actions">
-        <button class="btn-main btn-black">{{ 'HERO.CTA_WORK' | translate }}</button>
-        <button class="btn-main btn-outline">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
+      <div class="hero-cta">
+        <button class="btn-pill btn-blue">Explore My Work</button>
+        <button class="btn-pill btn-glass">Technical Vision</button>
       </div>
     </div>
   </section>
 
-  <!-- Skills Colorized with Icons -->
-  <section id="skills" class="skills-section">
+  <!-- Skills Section - AirLume Light Style -->
+  <section id="skills" class="skills-light">
     <div class="container">
-      <h2 class="section-label">Selected Tech Stack</h2>
+      <span class="section-label">Developer Features</span>
+      <h2 class="section-title">Core Competencies In Modern Tech</h2>
 
-      <div class="skills-grid">
-        <!-- Frontend Excellence -->
-        <div class="skill-category-card">
-          <span class="category-name">Frontend Engineering</span>
-          <div class="pills-box">
-            <span class="pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-            <span class="pill pill-ts"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
-            <span class="pill pill-angular"><i class="devicon-angularjs-plain colored"></i> Angular</span>
-            <span class="pill pill-react"><i class="devicon-react-original colored"></i> React</span>
-            <span class="pill"><i class="devicon-nextjs-plain colored"></i> Next.js</span>
-            <span class="pill"><i class="devicon-tailwindcss-original colored"></i> TailwindCSS</span>
-            <span class="pill"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
-            <span class="pill"><i class="devicon-css3-plain colored"></i> CSS / HTML</span>
-          </div>
+      <div class="skill-matrix">
+        <!-- Advanced Frontend -->
+        <div class="skill-box">
+          <div class="box-icon"><i class="devicon-angularjs-plain"></i></div>
+          <span class="box-name">Frontend Excellence</span>
+          <p class="box-desc">Expertise in Angular 19, React, and Next.js, building high-density, performant interfaces.</p>
         </div>
 
-        <!-- Backend Systems -->
-        <div class="skill-category-card">
-          <span class="category-name">System Design & Backend</span>
-          <div class="pills-box">
-            <span class="pill pill-node"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-            <span class="pill pill-nest"><i class="devicon-nestjs-plain colored"></i> NestJS</span>
-            <span class="pill"><i class="devicon-express-original"></i> Express</span>
-            <span class="pill"><i class="devicon-fastapi-plain colored"></i> Fastify / FastAPI</span>
-            <span class="pill pill-go"><i class="devicon-go-original-wordmark colored"></i> Go</span>
-            <span class="pill pill-python"><i class="devicon-python-plain colored"></i> Python</span>
-            <span class="pill pill-php"><i class="devicon-php-plain colored"></i> PHP / Symfony</span>
-          </div>
+        <!-- System Architecture -->
+        <div class="skill-box">
+          <div class="box-icon"><i class="devicon-nestjs-plain"></i></div>
+          <span class="box-name">System Architecture</span>
+          <p class="box-desc">Designing scalable backends with NestJS, Go, and Python. Microservices specialist.</p>
         </div>
 
-        <!-- Data & Architecture -->
-        <div class="skill-category-card">
-          <span class="category-name">Data & Messaging</span>
-          <div class="pills-box">
-            <span class="pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-            <span class="pill"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-            <span class="pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
-            <span class="pill"><i class="devicon-redis-plain colored"></i> Redis</span>
-            <span class="pill"><i class="devicon-apachekafka-original colored"></i> Kafka</span>
-            <span class="pill"><i class="devicon-elasticsearch-plain colored"></i> Elasticsearch</span>
-            <span class="pill"><i class="devicon-firebase-plain colored"></i> Firebase</span>
-          </div>
+        <!-- Infrastructure -->
+        <div class="skill-box">
+          <div class="box-icon"><i class="devicon-kubernetes-plain"></i></div>
+          <span class="box-name">Cloud & Infrastructure</span>
+          <p class="box-desc">Orchestrating cloud-native solutions with Kubernetes, Docker, and full CI/CD pipelines.</p>
         </div>
 
-        <!-- Cloud & DevOps -->
-        <div class="skill-category-card">
-          <span class="category-name">Cloud, DevOps & Mobile</span>
-          <div class="pills-box">
-            <span class="pill pill-docker"><i class="devicon-docker-plain colored"></i> Docker</span>
-            <span class="pill pill-k8s"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
-            <span class="pill"><i class="devicon-jenkins-line colored"></i> Jenkins</span>
-            <span class="pill"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
-            <span class="pill"><i class="devicon-grafana-original colored"></i> Grafana</span>
-            <span class="pill"><i class="devicon-linux-plain"></i> Linux / Bash</span>
-            <span class="pill pill-flutter"><i class="devicon-flutter-plain colored"></i> Flutter</span>
-            <span class="pill"><i class="devicon-react-original colored"></i> React Native</span>
-          </div>
+        <!-- Real-time Data -->
+        <div class="skill-box">
+          <div class="box-icon"><i class="devicon-apachekafka-original"></i></div>
+          <span class="box-name">Data & Analytics</span>
+          <p class="box-desc">Implementing real-time data flow with Apache Kafka, Redis, and Elasticsearch.</p>
         </div>
       </div>
     </div>
