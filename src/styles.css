@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  /* Architectural Color System */
-  --color-ink: #020617;      /* Slate 950 */
-  --color-void: #000000;
-  --color-primary: #38bdf8;  /* Sky 400 */
-  --color-accent: #8b5cf6;   /* Violet 500 */
-  --color-text: #f8fafc;
-  --color-muted: #64748b;
-  --color-border: rgba(255, 255, 255, 0.05);
+  /* Architectural "Industrial Slate" System */
+  --color-bg: #94a3b8;       /* Slate 400 - The "Concrete" base */
+  --color-surface: #cbd5e1;   /* Slate 300 - Highlights */
+  --color-ink: #0f172a;      /* Deep Navy - Pure Contrast */
+  --color-primary: #2563eb;  /* Blue 600 - Precision tools */
+  --color-border: rgba(15, 23, 42, 0.1);
+  --color-text: #0f172a;
+  --color-muted: #475569;
 
   --font-main: 'Inter', sans-serif;
   --container-max: 1200px;
-  --curve: 0.5rem;
 }
 
 * {
@@ -23,36 +22,36 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-ink);
+  background-color: var(--color-bg);
 }
 
 body {
-  background-color: var(--color-ink);
+  background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  overflow-x: hidden;
+  position: relative;
 }
 
-/* THE NEW ATMOSPHERE */
+/* THE "CONCRETE" ATMOSPHERE */
 .scene-bg {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
   z-index: -1;
   background: 
-    radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
-    radial-gradient(circle at 90% 90%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
-    var(--color-ink);
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.4) 0%, transparent 70%),
+    radial-gradient(circle at 90% 90%, rgba(37, 99, 235, 0.1) 0%, transparent 70%),
+    var(--color-bg);
 }
 
 .scene-bg::after {
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h1v1H0V0zm1 1h1v1H1V1zm58 58h1v1h-1v-1zm-1-1h1v1h-1v-1z' fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h1v1H0V0zm1 1h1v1H1V1zm38 38h1v1h-1v-1zm-1-1h1v1h-1v-1z' fill='%23ffffff' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
   z-index: 1;
 }
 
@@ -61,9 +60,10 @@ body {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
 }
 
-/* NAVIGATION V3 */
+/* NAVIGATION INDUSTRIAL STYLE */
 .navbar {
   position: fixed;
   top: 0; left: 0; width: 100%;
@@ -71,9 +71,9 @@ body {
   display: flex;
   align-items: center;
   z-index: 1000;
-  border-bottom: 1px solid var(--color-border);
-  background: rgba(2, 6, 23, 0.7);
-  backdrop-filter: blur(25px) saturate(180%);
+  border-bottom: 2px solid var(--color-border);
+  background: rgba(203, 213, 225, 0.8);
+  backdrop-filter: blur(15px);
 }
 
 .nav-content {
@@ -83,309 +83,92 @@ body {
   width: 100%;
 }
 
-.logo-lockup {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.logo-lockup .logo-main {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--color-ink);
+  letter-spacing: -0.04em;
 }
 
-.logo-main {
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.logo-sub {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.35em;
+.logo-lockup .logo-sub {
   color: var(--color-primary);
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 3rem;
-  align-items: center;
-}
-
-.nav-links li {
-  position: relative;
+  font-weight: 800;
+  letter-spacing: 0.2em;
 }
 
 .nav-links a {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
   color: var(--color-muted);
-  text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-primary);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.1em;
 }
 
 .nav-links a:hover {
-  color: #fff;
-  transform: translateY(-2px);
+  color: var(--color-ink);
 }
 
-.nav-links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.lang-selector {
-  display: flex;
-  gap: 0.8rem;
-  font-size: 10px;
-  font-weight: 800;
-  margin-left: 1.5rem;
-  border-left: 1px solid var(--color-border);
-  padding-left: 1.5rem;
-}
-
-.lang-btn {
-  cursor: pointer;
-  color: var(--color-muted);
-  transition: color 0.2s;
-}
-
-.lang-btn.active {
-  color: var(--color-primary);
+.nav-links a::after {
+  background-color: var(--color-ink) !important;
 }
 
 .btn-contact {
-  padding: 0.7rem 1.6rem;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary) !important;
-  border-radius: 4px;
-  font-size: 10px !important;
+  border: 2px solid var(--color-ink) !important;
+  color: var(--color-ink) !important;
+  font-weight: 900 !important;
 }
 
 .btn-contact:hover {
-  background: var(--color-primary);
-  color: var(--color-ink) !important;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  background: var(--color-ink);
+  color: #fff !important;
 }
 
-/* HERO V3 FIXES */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  position: relative;
-}
-
-.hero-inner {
-  width: 100%;
-}
-
+/* HERO INDUSTRIAL */
 .hero-meta {
   color: var(--color-primary);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  display: block;
+  opacity: 0.8;
 }
 
 .hero-heading {
-  font-size: clamp(3.5rem, 14vw, 8.5rem);
-  font-weight: 900;
-  line-height: 0.82;
-  letter-spacing: -0.06em;
-  margin-bottom: 4rem;
-  background: linear-gradient(to bottom, #fff 40%, rgba(255,255,255,0.4) 100%);
+  background: linear-gradient(to bottom, var(--color-ink) 0%, rgba(15, 23, 42, 0.5) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hero-heading span {
-  display: block; /* Forzado a bloque para separar JOSE de SOJO */
+  color: var(--color-ink);
 }
 
 .hero-subtitle {
-  font-size: 1.35rem;
-  max-width: 550px;
-  color: var(--color-muted);
-  margin-bottom: 4.5rem;
-  border-left: 3px solid var(--color-primary);
-  padding-left: 2rem;
-  line-height: 1.7;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 2rem;
-}
-
-.btn-v3 {
-  padding: 1.4rem 3.2rem;
-  font-weight: 800;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  border-radius: 4px;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-weight: 500;
 }
 
 .btn-primary-v3 {
-  background-color: var(--color-primary);
-  color: var(--color-ink);
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-}
-
-.btn-primary-v3:hover {
-  background-color: #fff;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.4);
+  background-color: var(--color-ink);
+  color: #fff;
 }
 
 .btn-secondary-v3 {
-  background: rgba(255, 255, 255, 0.02);
-  color: #fff;
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
 }
 
-.btn-secondary-v3:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-8px);
-}
-
-/* SKILLS V3 */
-.section-v3 {
-  padding: 14rem 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.v3-title-wrap {
-  margin-bottom: 8rem;
-}
-
-.v3-pretitle {
-  color: var(--color-primary);
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.v3-title {
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.skills-grid-v3 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 2.5rem;
-}
-
+/* SKILLS CONCRETE */
 .skill-card-v3 {
-  grid-column: span 4;
-  background: rgba(255, 255, 255, 0.012);
-  border: 1px solid var(--color-border);
-  padding: 4rem;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-card-v3::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 2px;
-  background: var(--color-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s ease;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
 }
 
 .skill-card-v3:hover {
-  background: rgba(255, 255, 255, 0.025);
-  transform: translateY(-15px);
-  border-color: rgba(56, 189, 248, 0.2);
-}
-
-.skill-card-v3:hover::before {
-  transform: scaleX(1);
-}
-
-.card-num {
-  position: absolute;
-  top: 2rem; right: 2rem;
-  font-size: 12px;
-  font-weight: 900;
-  color: var(--color-primary);
-  opacity: 0.4;
+  background: rgba(255, 255, 255, 0.4);
+  border-color: var(--color-ink);
 }
 
 .card-title {
-  font-size: 0.9rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 2.5rem;
-  color: #fff;
-}
-
-.tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  color: var(--color-ink);
 }
 
 .tag-v3 {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(15, 23, 42, 0.1);
   color: var(--color-muted);
-  transition: all 0.3s ease;
-  background: rgba(0,0,0,0.2);
 }
-
-.tag-v3:hover {
-  border-color: currentColor;
-  transform: scale(1.1);
-}
-
-/* BRANDING COLORS */
-.tag-angular { color: #dd0031; }
-.tag-react { color: #61dafb; }
-.tag-ts { color: #3178c6; }
-.tag-js { color: #f7df1e; }
-.tag-next { color: #fff; }
-.tag-node { color: #68a063; }
-.tag-nest { color: #e0234e; }
-.tag-go { color: #00add8; }
-.tag-docker { color: #2496ed; }
-.tag-k8s { color: #326ce5; }
