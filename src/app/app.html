@@ -10,17 +10,21 @@
         <li><a href="#portfolio">Works</a></li>
         <li><a href="#about">Philosophy</a></li>
       </ul>
+      <div class="language-switch" style="display: flex; gap: 10px; margin-left: 2rem; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
+        <span class="lang-opt" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
+        <span class="lang-opt" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+      </div>
       <a href="#contact" class="contact-pill">Contact Us</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section - Deep AirLume Style -->
+  <!-- Hero Section -->
   <section class="hero-deep">
     <div class="hero-aura"></div>
     <div class="container">
-      <span class="hero-chip">Fly Smarter With Architect</span>
+      <span class="hero-chip">Senior Web & Cloud Architect</span>
       <h1 class="hero-title">High Performance Engineering For Modern Platforms</h1>
       <p class="hero-desc">Building resilient digital architectures with a focus on scalability, modern engineering, and cutting-edge user experiences.</p>
       
@@ -31,40 +35,152 @@
     </div>
   </section>
 
-  <!-- Skills Section - AirLume Light Style -->
+  <!-- Skills Section -->
   <section id="skills" class="skills-light">
     <div class="container">
       <span class="section-label">Developer Features</span>
       <h2 class="section-title">Core Competencies In Modern Tech</h2>
 
       <div class="skill-matrix">
-        <!-- Advanced Frontend -->
         <div class="skill-box">
           <div class="box-icon"><i class="devicon-angularjs-plain"></i></div>
           <span class="box-name">Frontend Excellence</span>
           <p class="box-desc">Expertise in Angular 19, React, and Next.js, building high-density, performant interfaces.</p>
         </div>
 
-        <!-- System Architecture -->
         <div class="skill-box">
           <div class="box-icon"><i class="devicon-nestjs-plain"></i></div>
           <span class="box-name">System Architecture</span>
           <p class="box-desc">Designing scalable backends with NestJS, Go, and Python. Microservices specialist.</p>
         </div>
 
-        <!-- Infrastructure -->
         <div class="skill-box">
           <div class="box-icon"><i class="devicon-kubernetes-plain"></i></div>
           <span class="box-name">Cloud & Infrastructure</span>
           <p class="box-desc">Orchestrating cloud-native solutions with Kubernetes, Docker, and full CI/CD pipelines.</p>
         </div>
 
-        <!-- Real-time Data -->
         <div class="skill-box">
           <div class="box-icon"><i class="devicon-apachekafka-original"></i></div>
           <span class="box-name">Data & Analytics</span>
           <p class="box-desc">Implementing real-time data flow with Apache Kafka, Redis, and Elasticsearch.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section - New Industrial Grid -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <span class="section-label">Industrial Projects</span>
+      <h2 class="section-title">Selected Case Studies</h2>
+
+      <div class="portfolio-grid">
+        <!-- Project 1: Nutringest -->
+        <article class="project-card">
+          <div class="project-image-box">
+            <img src="nutringest_mockup_1774810976852.png" alt="Nutringest SaaS">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Nutringest SaaS</h3>
+            <p class="project-summary">Comprehensive software for nutritionists to manage patients and products with high-precision metrics.</p>
+            <div class="project-tags">
+              <span class="tag-chip">Next.js</span>
+              <span class="tag-chip">NestJS</span>
+              <span class="tag-chip">PostgreSQL</span>
+              <span class="tag-chip">Prisma</span>
+            </div>
+            <a href="https://nutringest.quanticarch.com/" target="_blank" class="project-link">View Live System <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
+
+        <!-- Project 2: CronoByke -->
+        <article class="project-card">
+          <div class="project-image-box">
+            <img src="cronobyke_mockup_1774810993824.png" alt="CronoByke IoT">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">CronoByke Timing</h3>
+            <p class="project-summary">IoT-enabled race timing software for extreme cycling circuits and professional competition tracking.</p>
+            <div class="project-tags">
+              <span class="tag-chip">IoT</span>
+              <span class="tag-chip">Next</span>
+              <span class="tag-chip">WebSockets</span>
+              <span class="tag-chip">PostgreSQL</span>
+            </div>
+            <a href="https://cronobyke.quanticarch.com/" target="_blank" class="project-link">Engage IoT <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
+
+        <!-- Project 3: ApexDrive -->
+        <article class="project-card">
+          <div class="project-image-box">
+            <img src="apexdrive_mockup_1774811010887.png" alt="ApexDrive Auction">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">ApexDrive Hall</h3>
+            <p class="project-summary">Advanced car auction platform featuring real-time bidding, web3 integration, and AI-driven appraisals.</p>
+            <div class="project-tags">
+              <span class="tag-chip">Web3</span>
+              <span class="tag-chip">AI</span>
+              <span class="tag-chip">WebSockets</span>
+              <span class="tag-chip">NestJS</span>
+            </div>
+            <a href="https://apexdrive.quanticarch.com/" target="_blank" class="project-link">Enter Auction <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
+
+        <!-- Project 4: Rinde+ -->
+        <article class="project-card">
+          <div class="project-image-box">
+            <img src="rindemas_mockup_1774811026181.png" alt="Rinde+ FinTech">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Rinde+ Management</h3>
+            <p class="project-summary">Cost centralization and budget management hub with Kafka-driven data streaming.</p>
+            <div class="project-tags">
+              <span class="tag-chip">Go</span>
+              <span class="tag-chip">Kafka</span>
+              <span class="tag-chip">Elasticsearch</span>
+              <span class="tag-chip">Python</span>
+            </div>
+            <a href="https://rindemas.quanticarch.com/dashboard" target="_blank" class="project-link">Manage Assets <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
+
+        <!-- Project 5: Speed Delivery -->
+        <article class="project-card">
+          <div class="project-image-box" style="background: linear-gradient(135deg, #2563eb, #6366f1); position: relative;">
+             <span style="position: absolute; color: white; font-weight: 900; font-size: 2rem; opacity: 0.1;">LOGISTICS</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Speed Delivery</h3>
+            <p class="project-summary">Full-scale logistics and transport management for industrial delivery fleets. Web & Mobile.</p>
+            <div class="project-tags">
+              <span class="tag-chip">Flutter</span>
+              <span class="tag-chip">NestJS</span>
+              <span class="tag-chip">Redis</span>
+            </div>
+            <a href="http://speed-drive.quanticarch.com/" target="_blank" class="project-link">Active Fleet <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
+
+        <!-- Project 6: Workshops -->
+        <article class="project-card">
+          <div class="project-image-box" style="background: linear-gradient(135deg, #1e293b, #0f172a); position: relative;">
+            <span style="position: absolute; color: white; font-weight: 900; font-size: 2rem; opacity: 0.1;">WORKSHOP</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Talleres Mecanicos</h3>
+            <p class="project-summary">Cloud SaaS for automotive workshops, handling parts, inventory and repair management.</p>
+            <div class="project-tags">
+              <span class="tag-chip">Next.js</span>
+              <span class="tag-chip">Prisma</span>
+              <span class="tag-chip">Architect</span>
+            </div>
+            <a href="https://talleresmecanicos.quanticarch.com/" target="_blank" class="project-link">View SaaS <i class="devicon-chrome-plain"></i></a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
