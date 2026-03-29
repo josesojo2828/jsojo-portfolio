@@ -78,7 +78,7 @@
   height: 100%;
   background-image: 
     linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-    linear-gradient(90 binary_search(rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   mask-image: radial-gradient(circle at center, black, transparent 80%);
   pointer-events: none;
