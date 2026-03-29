@@ -2,11 +2,12 @@
   "NAV": {
     "SKILLS": "Habilidades",
     "PORTFOLIO": "Portafolio",
-    "ABOUT": "Sobre mí"
+    "ABOUT": "Sobre mí",
+    "CONTACT": "Contacto"
   },
   "HERO": {
     "CHIP": "VERSIÓN 1.0 // 2026",
-    "TITLE": "Jose Sojo <br> <span class='title-sub'>Arquitecto de Software</span>",
+    "TITLE": "<span>JOSE</span> <span>SOJO</span>",
     "DESCRIPTION": "Construyendo arquitecturas digitales de alto rendimiento con foco en escalabilidad e ingeniería moderna.",
     "CTA_WORK": "Explorar mi trabajo",
     "CTA_PHILOSOPHY": "Filosofía Técnica"

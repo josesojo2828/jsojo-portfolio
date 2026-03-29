@@ -12,8 +12,13 @@
         <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
         <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
         <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
+        <li class="lang-selector">
+          <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
+          <span style="color: rgba(255,255,255,0.2)">/</span>
+          <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+        </li>
         <li>
-          <a href="#contact" class="btn-contact">{{ 'NAV.ABOUT' | translate }}</a> <!-- Reemplazado por Contacto logicamente -->
+          <a href="#contact" class="btn-contact">{{ 'NAV.CONTACT' | translate }}</a>
         </li>
       </ul>
     </nav>
@@ -25,10 +30,7 @@
   <section class="hero">
     <div class="container hero-inner">
       <span class="hero-meta">{{ 'HERO.CHIP' | translate }}</span>
-      <h1 class="hero-heading">
-        <span>JOSE</span>
-        <span>SOJO</span>
-      </h1>
+      <h1 class="hero-heading" [innerHTML]="'HERO.TITLE' | translate"></h1>
       <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
       
       <div class="hero-actions">
@@ -38,7 +40,7 @@
     </div>
   </section>
 
-  <!-- Skills V3 (Preview) -->
+  <!-- Skills V3 -->
   <section id="skills" class="section-v3">
     <div class="container">
       <div class="v3-title-wrap">
