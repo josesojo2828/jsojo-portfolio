@@ -1,12 +1,13 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule],
+  imports: [TranslateModule, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -15,7 +16,15 @@ export class App implements OnInit {
   private readonly translate = inject(TranslateService);
   private readonly seo = inject(SeoService);
 
-  activeLang = signal('es');
+  // Form Signals
+  formData = {
+    name: signal(''),
+    email: signal(''),
+    message: signal('')
+  };
+  
+  isSending = signal(false);
+  sentSuccess = signal(false);
 
   ngOnInit() {
     this.translate.setDefaultLang('es');
@@ -23,17 +32,64 @@ export class App implements OnInit {
     this.updateSeo();
   }
 
-  setLanguage(lang: string) {
-    this.translate.use(lang);
-    this.activeLang.set(lang);
-    this.updateSeo();
+  /**
+   * 🛡️ SECURE SUBMISSION:
+   * Calls the local Express Proxy API /api/contact instead of Telegram Bot API directly.
+   * This protects the Bot Token and Chat ID.
+   */
+  async sendToTelegram(event: Event) {
+    event.preventDefault();
+    this.isSending.set(true);
+
+    const data = {
+      name: this.formData.name(),
+      email: this.formData.email(),
+      message: this.formData.message()
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        this.sentSuccess.set(true);
+        // Reset form
+        this.formData.name.set('');
+        this.formData.email.set('');
+        this.formData.message.set('');
+        setTimeout(() => this.sentSuccess.set(false), 5000);
+      }
+    } catch (error) {
+      console.error('Error in secure submission', error);
+    } finally {
+      this.isSending.set(false);
+    }
+  }
+
+  /**
+   * 📋 COPY TO CLIPBOARD:
+   * Copies the email address and provides instant visual feedback via Signal.
+   */
+  async copyEmail() {
+    const email = 'josesojo2828@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      const originalState = this.sentSuccess();
+      this.sentSuccess.set(true); // Reuse success signal for feedback
+      setTimeout(() => this.sentSuccess.set(originalState), 2000);
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
   }
 
   private updateSeo() {
     this.seo.updateTags({
-      title: 'Jose Sojo | Software Architect & Digital Craftsman',
-      description: 'Senior Software Architect specializing in scalable Angular architectures and cloud-native solutions.',
-      keywords: 'Angular, Architecture, Software Engineer, Cloud-native, K8s, TypeScript'
+      title: 'Jose Sojo | Arquitecto de Software & Artesano Digital',
+      description: 'Senior Software Architect especializado en arquitecturas Angular escalables y soluciones cloud-native.',
+      keywords: 'Angular, Arquitectura, Ingeniero de Software, Cloud-native, K8s, TypeScript'
     });
   }
 }

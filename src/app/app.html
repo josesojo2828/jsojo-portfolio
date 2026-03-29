@@ -4,129 +4,267 @@
       <span class="branding-name">JoseSojo.</span>
     </div>
     
-    <nav style="display: flex; align-items: center;">
+    <nav>
       <ul class="nav-links">
-        <li><a href="#skills">Features</a></li>
-        <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#projects">PROYECTOS</a></li>
+        <li><a href="#contact">CONTACTO</a></li>
       </ul>
-      <div class="language-switch" style="display: flex; gap: 10px; margin-left: 2rem; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
-        <span class="lang-opt" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-        <span class="lang-opt" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
-      </div>
-      <a href="#contact" class="contact-pill" style="margin-left: 2rem;">Contact Now</a>
+      <a href="#contact" class="contact-pill">HABLEMOS</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section Refined -->
+  <!-- Hero Section -->
   <section class="hero-deep">
     <div class="hero-aura"></div>
     <div class="container">
-      <span class="hero-chip">Senior Software Architect</span>
-      <h1 class="hero-title">Arquitectura de software para que los desafíos de hoy, no sean un problema mañana.</h1>
+      <h1 class="hero-title">
+        <span class="hero-label">Ingeniería & Estrategia</span>
+        Arquitectura de software para que los <br>
+        desafíos de <span class="accent-line">hoy</span>, no sean un <br>
+        <span class="impact-text">problema mañana.</span>
+      </h1>
       
-      <div class="hero-cta" style="margin-bottom: 6rem !important;">
-        <button class="btn-pill btn-blue">Explore My Projects</button>
-        <button class="btn-pill btn-glass" style="margin-left: 1.5rem;">Technical Philosophy</button>
-      </div>
-
-      <!-- NEW FLAT SKILLS CARD (White island in Navy sea) -->
+      <!-- CATEGORIZED SKILLS CARD -->
       <div id="skills" class="skills-hero-card">
-        <span class="card-label-f">Selected Technological Intelligence</span>
-        <div class="skills-horizontal-scroll">
-          <div class="h-pill"><i class="devicon-angularjs-plain colored"></i> Angular</div>
-          <div class="h-pill"><i class="devicon-react-original colored"></i> React</div>
-          <div class="h-pill"><i class="devicon-nestjs-plain colored"></i> NestJS</div>
-          <div class="h-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
-          <div class="h-pill"><i class="devicon-go-original-wordmark colored"></i> Go</div>
-          <div class="h-pill"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
-          <div class="h-pill"><i class="devicon-docker-plain colored"></i> Docker</div>
-          <div class="h-pill"><i class="devicon-apachekafka-original colored"></i> Kafka</div>
-          <div class="h-pill"><i class="devicon-postgresql-plain colored"></i> Postgres</div>
-          <div class="h-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
-          <div class="h-pill"><i class="devicon-python-plain colored"></i> Python</div>
-          <div class="h-pill"><i class="devicon-php-plain colored"></i> PHP</div>
+        <div class="skills-grid-categorized">
+          <div class="skill-cat">
+            <span class="skill-category-title">Frontend Engine</span>
+            <div class="skill-list-flex">
+              <div class="s-pill"><i class="devicon-angularjs-plain colored"></i> Angular</div>
+              <div class="s-pill"><i class="devicon-react-original colored"></i> React</div>
+              <div class="s-pill"><i class="devicon-nextjs-plain"></i> Next.js</div>
+              <div class="s-pill"><i class="devicon-typescript-plain colored"></i> TS</div>
+              <div class="s-pill"><i class="devicon-tailwindcss-original colored"></i> Tailwind</div>
+              <div class="s-pill"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+              <div class="s-pill"><i class="devicon-html5-plain colored"></i> HTML5</div>
+              <div class="s-pill"><i class="devicon-css3-plain colored"></i> CSS3</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-category-title">Backend & Systems</span>
+            <div class="skill-list-flex">
+              <div class="s-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+              <div class="s-pill"><i class="devicon-nestjs-plain colored"></i> NestJS</div>
+              <div class="s-pill"><i class="devicon-go-original-wordmark colored"></i> Go</div>
+              <div class="s-pill"><i class="devicon-python-plain colored"></i> Python</div>
+              <div class="s-pill"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+              <div class="s-pill"><i class="devicon-php-plain colored"></i> PHP</div>
+              <div class="s-pill"><i class="devicon-symfony-original colored"></i> Symfony</div>
+              <div class="s-pill"><i class="devicon-express-original"></i> Express</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-category-title">Cloud & DevOps</span>
+            <div class="skill-list-flex">
+              <div class="s-pill"><i class="devicon-kubernetes-plain colored"></i> K8s</div>
+              <div class="s-pill"><i class="devicon-docker-plain colored"></i> Docker</div>
+              <div class="s-pill"><i class="devicon-jenkins-plain colored"></i> Jenkins</div>
+              <div class="s-pill"><i class="devicon-linux-plain colored"></i> Linux</div>
+              <div class="s-pill"><i class="devicon-prometheus-original colored"></i> Prometheus</div>
+              <div class="s-pill"><i class="devicon-grafana-plain colored"></i> Grafana</div>
+              <div class="s-pill"><i class="devicon-git-plain colored"></i> CI/CD</div>
+              <div class="s-pill"><i class="devicon-bash-plain colored"></i> Bash</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-category-title">Data & Mobile</span>
+            <div class="skill-list-flex">
+              <div class="s-pill"><i class="devicon-postgresql-plain colored"></i> Postgres</div>
+              <div class="s-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+              <div class="s-pill"><i class="devicon-redis-plain colored"></i> Redis</div>
+              <div class="s-pill"><i class="devicon-apachekafka-original colored"></i> Kafka</div>
+              <div class="s-pill"><i class="devicon-elasticsearch-plain colored"></i> Elastic</div>
+              <div class="s-pill"><i class="devicon-flutter-plain colored"></i> Flutter</div>
+              <div class="s-pill"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+              <div class="s-pill"><i class="devicon-react-original colored"></i> ReactNative</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Transition -->
+  <!-- Projects Gallery COMPLETE -->
   <section id="portfolio" class="content-transition">
     <div class="container">
-      <span class="section-label">Selected Works</span>
-      <h2 class="section-title">Technological Portfolio</h2>
+      <span class="section-label">Casos de Éxito Industriales</span>
+      <h2 class="section-title">Portafolio Tecnológico</h2>
 
       <div class="project-grid-airlume">
         <article class="project-box">
-          <div class="box-img-area">
-            <img src="nutringest_mockup_1774810976852.png" alt="Nutringest">
-          </div>
+          <div class="box-img-area"><img src="projects/nutringest.png" alt="Nutringest"></div>
           <div class="box-content">
             <h3 class="box-name">Nutringest SaaS</h3>
-            <p class="box-summary">Digital ecosystem for nutritionist clinics. Integrated patient tracking and medical asset management.</p>
-            <div class="box-tags">
-              <span class="box-tag">Next.js</span>
-              <span class="box-tag">NestJS</span>
-              <span class="box-tag">Prisma</span>
-            </div>
-            <a href="https://nutringest.quanticarch.com/" target="_blank" class="system-link">Launch System →</a>
+            <p class="box-summary">Ecosistema digital para clínicas nutricionales. Seguimiento clínico integral de pacientes y gestión de activos médicos.</p>
+            <div class="box-tags"><span class="box-tag">Next.js</span><span class="box-tag">NestJS</span><span class="box-tag">Prisma</span></div>
+            <a href="https://nutringest.quanticarch.com/" target="_blank" class="system-link">Lanzar Sistema →</a>
           </div>
         </article>
 
         <article class="project-box">
-          <div class="box-img-area">
-            <img src="cronobyke_mockup_1774810993824.png" alt="CronoByke">
-          </div>
+          <div class="box-img-area"><img src="projects/cronobyke.png" alt="CronoByke"></div>
           <div class="box-content">
             <h3 class="box-name">CronoByke Timing</h3>
-            <p class="box-summary">IoT telemetry and professional timing for cycling races. Real-time data processing.</p>
-            <div class="box-tags">
-              <span class="box-tag">IoT</span>
-              <span class="box-tag">WebSockets</span>
-              <span class="box-tag">Next</span>
-            </div>
-            <a href="https://cronobyke.quanticarch.com/" target="_blank" class="system-link">Launch System →</a>
+            <p class="box-summary">Telemetría IoT y cronometraje profesional para carreras. Streaming de datos en tiempo real mediante WebSockets.</p>
+            <div class="box-tags"><span class="box-tag">IoT</span><span class="box-tag">Real-Time</span><span class="box-tag">Sockets</span></div>
+            <a href="https://cronobyke.quanticarch.com/" target="_blank" class="system-link">Lanzar Sistema →</a>
           </div>
         </article>
 
         <article class="project-box">
-          <div class="box-img-area">
-            <img src="apexdrive_mockup_1774811010887.png" alt="ApexDrive">
-          </div>
+          <div class="box-img-area"><img src="projects/apexdrive.png" alt="ApexDrive"></div>
           <div class="box-content">
             <h3 class="box-name">ApexDrive Hall</h3>
-            <p class="box-summary">Real-time car auction marketplace with Web3 integration and AI-driven appraisals.</p>
-            <div class="box-tags">
-              <span class="box-tag">Web3</span>
-              <span class="box-tag">AI</span>
-              <span class="box-tag">Node</span>
-            </div>
-            <a href="https://apexdrive.quanticarch.com/" target="_blank" class="system-link">Launch System →</a>
+            <p class="box-summary">Portal de subastas automotrices de lujo con contratos Web3 y tasaciones inteligentes por IA.</p>
+            <div class="box-tags"><span class="box-tag">Web3</span><span class="box-tag">AI</span><span class="box-tag">Node</span></div>
+            <a href="https://apexdrive.quanticarch.com/" target="_blank" class="system-link">Lanzar Sistema →</a>
           </div>
         </article>
+
+        <article class="project-box">
+          <div class="box-img-area"><img src="projects/rindemas.png" alt="Rinde+ FinTech"></div>
+          <div class="box-content">
+            <h3 class="box-name">Rinde+ FinTech</h3>
+            <p class="box-summary">Hub financiero para centralización de costos. Infraestructura escalable sobre Kafka y Elasticsearch.</p>
+            <div class="box-tags"><span class="box-tag">Go</span><span class="box-tag">Kafka</span><span class="box-tag">Elastic</span></div>
+            <a href="https://rindemas.quanticarch.com/dashboard" target="_blank" class="system-link">Lanzar Sistema →</a>
+          </div>
+        </article>
+
+        <article class="project-box">
+          <div class="box-img-area"><img src="projects/speeddelivery.png" alt="Speed Delivery"></div>
+          <div class="box-content">
+            <h3 class="box-name">Speed Delivery Ops</h3>
+            <p class="box-summary">Software de logística y última milla. Orquestación de pedidos y conductores en tiempo real.</p>
+            <div class="box-tags"><span class="box-tag">Next.js</span><span class="box-tag">Sockets</span><span class="box-tag">Postgres</span></div>
+            <a href="http://speed-drive.quanticarch.com/" target="_blank" class="system-link">Lanzar Sistema →</a>
+          </div>
+        </article>
+
+        <article class="project-box">
+          <div class="box-img-area"><img src="projects/talleresmecanicos.png" alt="Talleres Mecanicos"></div>
+          <div class="box-content">
+            <h3 class="box-name">Talleres Industriales</h3>
+            <p class="box-summary">SaaS integral para la gestión de talleres automotrices masivos. Control de inventario y órdenes escalables.</p>
+            <div class="box-tags"><span class="box-tag">Next.js</span><span class="box-tag">Prisma</span><span class="box-tag">Enterprise</span></div>
+            <a href="https://talleresmecanicos.quanticarch.com/" target="_blank" class="system-link">Lanzar Sistema →</a>
+          </div>
+        </article>
+      </div> <!-- close project-grid-airlume -->
+    </div> <!-- close container -->
+  </section> <!-- close portfolio section -->
+
+  <!-- CONTACT SECTION (SCREENSHOT PATTERN) -->
+  <section id="contact" class="content-transition">
+    <div class="container contact-split">
+      
+      <!-- Left side: Info -->
+      <div class="contact-info-side">
+        <span class="section-label" style="text-align: left;">ESTOY PARA AYUDARTE</span>
+        <h2 class="contact-huge-title">Hablemos de tu <br> Arquitectura de Software</h2>
+        <p class="contact-description">
+          ¿Buscás soluciones de alta ingeniería escalables y sólidas? 
+          Conectemos para transformar tus desafíos técnicos en una ventaja competitiva de mercado.
+        </p>
+
+        <div class="direct-contact-list">
+          <div class="contact-item">
+            <div class="c-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099l3.83-3.104 5.612 8.138h-18.745l5.479-8.133zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z"/></svg>
+            </div>
+            <div class="c-text">
+              <small>E-mail</small>
+              <strong (click)="copyEmail()" style="cursor: pointer;">{{ sentSuccess() ? '¡COPIADO!' : 'josesojo2828@gmail.com' }}</strong>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="c-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 0C5.373 0 0 5.373 0 12c0 2.123.555 4.115 1.528 5.842L0 24l6.335-1.662c1.72.934 3.69 1.462 5.669 1.462 6.63 0 12.004-5.373 12.004-12 0-6.627-5.374-12-12.004-12zM12.004 21.931c-1.808 0-3.582-.488-5.138-1.41l-.369-.219-3.822 1.002 1.019-3.722-.24-.383A9.878 9.878 0 012.069 12a9.932 9.932 0 019.935-9.931c5.477 0 9.931 4.454 9.931 9.931s-4.454 9.931-9.931 9.931z"/></svg>
+            </div>
+            <div class="c-text">
+              <small>Número de contacto</small>
+              <strong>+58 412 119 5848</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-pills-row" style="margin-top: 4rem;">
+            <!-- GitHub -->
+            <a href="https://github.com/josesojo2828" target="_blank" class="social-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/jose.josejaimes.9" target="_blank" class="social-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/josesojo28/" target="_blank" class="social-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.337 2.617 6.78 6.979 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.338-.2 6.78-2.617 6.98-6.979.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.359-2.614-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+        </div>
       </div>
+
+      <!-- Right side: Form Card -->
+      <div class="contact-card-side">
+        <form (submit)="sendToTelegram($event)" class="industrial-card-form">
+          <div class="field-item">
+            <label>Su Nombre</label>
+            <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Ej. Ing. Carlos Pérez" required>
+          </div>
+
+          <div class="field-item">
+            <label>Correo Electrónico</label>
+            <input type="email" [(ngModel)]="formData.email" name="email" placeholder="correo@empresa.com" required>
+          </div>
+
+          <div class="field-item">
+            <label>Objetivo Técnico</label>
+            <select name="objective" style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; font-size: 14px;">
+              <option value="arch">Arquitectura Nueva</option>
+              <option value="scale">Escalamiento</option>
+              <option value="audit">Auditoría Técnica</option>
+            </select>
+          </div>
+
+          <div class="field-item">
+            <label>Tu Desafío</label>
+            <textarea [(ngModel)]="formData.message" name="message" rows="4" placeholder="¿Qué arquitectura necesitas escalar hoy?" required></textarea>
+          </div>
+
+          <button type="submit" [disabled]="isSending()" class="action-arrow-btn">
+            <div class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <span class="btn-label">{{ isSending() ? 'ESTABLECIENDO CONEXIÓN...' : 'OBTENER UNA SOLUCIÓN' }}</span>
+          </button>
+
+          @if(sentSuccess()) {
+            <div class="success-alert">
+              PROYECTO RECIBIDO. ESTABLECIENDO CONTACTO.
+            </div>
+          }
+        </form>
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="master-footer" id="contact">
+  <!-- Minimal Footer -->
+  <footer class="master-footer">
     <div class="container">
-      <span class="section-label" style="color: #fff; opacity: 0.5;">Contact Us</span>
-      <h2 class="section-title" style="color: #fff; margin-bottom: 5rem !important;">Hablemos de ingeniería.</h2>
-      
-      <div class="footer-socials">
-        <a href="https://wa.me/58482348" target="_blank" class="social-link"><i class="devicon-whatsapp-plain"></i></a>
-        <a href="https://www.facebook.com/jose.josejaimes.9" target="_blank" class="social-link"><i class="devicon-facebook-plain"></i></a>
-        <a href="https://www.instagram.com/josesojo28/" target="_blank" class="social-link"><i class="devicon-instagram-plain"></i></a>
-        <a href="mailto:josesojo2828@gmail.com" class="social-link"><i class="devicon-google-plain"></i></a>
-      </div>
-
-      <p class="footer-copy">© 2026 Jose Sojo • Software Architecture & Digital Craftsman</p>
+      <p class="footer-copy">© 2026 Jose Sojo • Arquitecto de Software & Artesano Digital</p>
     </div>
   </footer>
 
-  <router-outlet></router-outlet>
+  <!-- WhatsApp Hotline -->
+  <a href="https://wa.me/584128606734?text=WEB" target="_blank" class="wa-float">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 0C5.373 0 0 5.373 0 12c0 2.123.555 4.115 1.528 5.842L0 24l6.335-1.662c1.72.934 3.69 1.462 5.669 1.462 6.63 0 12.004-5.373 12.004-12 0-6.627-5.374-12-12.004-12zM12.004 21.931c-1.808 0-3.582-.488-5.138-1.41l-.369-.219-3.822 1.002 1.019-3.722-.24-.383A9.878 9.878 0 012.069 12a9.932 9.932 0 019.935-9.931c5.477 0 9.931 4.454 9.931 9.931s-4.454 9.931-9.931 9.931z"/>
+    </svg>
+  </a>
+
 </main>

@@ -5,4 +5,8 @@ services:
     container_name: jsojo-portfolio-app
     ports:
       - "4000:4000"
+    environment:
+      - PORT=${PORT:-4000}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
     restart: always
