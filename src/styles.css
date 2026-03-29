@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 :root {
-  --color-platinum: #e2e8f0;   /* Titanium Finish */
-  --color-void: #020617;       /* Deep Navy / Slate 950 */
-  --color-primary: #2563eb;    /* Electric Blue */
-  --color-accent: #8b5cf6;     /* Light Violet */
-  --color-dim: rgba(15, 23, 42, 0.1);
+  /* Architectural "White Canvas" Palette */
+  --color-bg: #ffffff;
+  --color-ink: #000000;
+  --color-primary: #2563eb; 
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
   --font-main: 'Inter', sans-serif;
 }
 
@@ -16,229 +17,217 @@
 }
 
 body {
-  background-color: var(--color-platinum) !important;
-  color: var(--color-void) !important;
+  background-color: var(--color-bg) !important;
+  color: var(--color-ink) !important;
   font-family: var(--font-main) !important;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-.scene-bg {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -1;
-  background: 
-    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.2) 0%, transparent 60%),
-    radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.2) 0%, transparent 60%),
-    var(--color-platinum);
-}
-
 .container {
   max-width: 1200px !important;
   margin: 0 auto !important;
   padding: 0 2rem !important;
-  position: relative;
 }
 
-/* NAVBAR SOVEREIGN */
+/* NAVBAR WHITE MINIMALIST */
 #master-nav {
   position: fixed !important;
   top: 0; left: 0; width: 100% !important;
   height: 90px !important;
-  background: rgba(226, 232, 240, 0.8) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(20px);
-  border-bottom: 2px solid var(--color-dim) !important;
-  z-index: 9999;
+  border-bottom: 1px solid var(--color-border) !important;
+  z-index: 10000;
   display: flex !important;
   align-items: center !important;
 }
 
 #master-nav .nav-content {
   display: flex !important;
-  width: 100% !important;
   justify-content: space-between !important;
   align-items: center !important;
-}
-
-.branding {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
+  width: 100% !important;
 }
 
 .branding-name {
-  font-size: 1.4rem !important;
-  font-weight: 900 !important;
-  color: var(--color-void) !important;
+  font-size: 1.2rem !important;
+  font-weight: 950 !important;
   text-transform: uppercase;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .branding-title {
-  font-size: 0.7rem !important;
-  font-weight: 800 !important;
-  color: var(--color-primary) !important;
-  letter-spacing: 0.3em;
+  font-size: 0.65rem !important;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-primary);
+  margin-left: 1rem !important;
 }
 
-.link-list {
+.nav-links {
   display: flex !important;
-  gap: 3rem !important;
   list-style: none !important;
+  gap: 2.5rem !important;
   align-items: center !important;
 }
 
-.link-list a {
+.nav-links a {
   font-size: 11px !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  color: var(--color-void) !important;
-  text-decoration: none;
-  opacity: 0.6;
+  letter-spacing: 0.1em !important;
+  color: var(--color-ink) !important;
+  text-decoration: none !important;
+  opacity: 0.5;
   transition: opacity 0.3s;
 }
 
-.link-list a:hover { opacity: 1; }
+.nav-links a:hover { opacity: 1; }
 
-.language-switch {
+.language-selector {
   display: flex !important;
-  gap: 1rem !important;
-  font-size: 10px !important;
-  font-weight: 900 !important;
-  border-left: 2px solid var(--color-dim) !important;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 900;
+  border-left: 1px solid var(--color-border);
   padding-left: 1.5rem !important;
   margin-left: 1.5rem !important;
 }
 
-.lang-option { cursor: pointer; opacity: 0.4; }
-.lang-option.active { opacity: 1; color: var(--color-primary); }
+.lang-btn { cursor: pointer; opacity: 0.3; }
+.lang-btn.active { opacity: 1; color: var(--color-primary); }
 
 .contact-btn {
-  padding: 0.8rem 1.8rem !important;
-  border: 2px solid var(--color-void) !important;
-  color: var(--color-void) !important;
-  font-weight: 950 !important;
+  padding: 0.7rem 1.4rem !important;
+  background: var(--color-ink) !important;
+  color: #fff !important;
   font-size: 10px !important;
+  font-weight: 900 !important;
   text-transform: uppercase !important;
   border-radius: 4px !important;
   text-decoration: none !important;
   margin-left: 2rem !important;
 }
 
-/* HERO SOVEREIGN */
-.master-hero {
-  min-height: 100vh !important;
+/* HERO WHITE CANVAS */
+.hero-section {
+  min-height: 85vh !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
+  padding-top: 90px !important;
 }
 
-.hero-main-title {
-  font-size: clamp(3.5rem, 15vw, 8.5rem) !important;
+.hero-title {
+  font-size: clamp(4rem, 15vw, 10rem) !important;
   font-weight: 950 !important;
-  line-height: 0.82 !important;
+  line-height: 0.8 !important;
   letter-spacing: -0.05em !important;
-  margin-bottom: 4rem !important;
-  color: var(--color-void) !important;
+  margin-bottom: 3rem !important;
 }
 
-.hero-main-title span { display: block !important; }
+.hero-title span { display: block !important; }
 
-.hero-desc {
-  font-size: 1.4rem !important;
+.hero-subtitle {
+  font-size: 1.3rem !important;
   max-width: 600px !important;
-  margin: 0 auto 5rem !important;
-  color: var(--color-void) !important;
-  font-weight: 600 !important;
-  opacity: 0.7;
+  margin: 0 auto 4rem !important;
+  font-weight: 500;
+  color: var(--color-muted) !important;
 }
 
-.hero-btns {
+.hero-actions {
   display: flex !important;
-  gap: 2rem !important;
+  gap: 1.5rem !important;
   justify-content: center !important;
 }
 
-.primary-action {
-  background: var(--color-void) !important;
-  color: #fff !important;
+.btn-main {
+  padding: 1.4rem 3.5rem !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
   border: none !important;
-  padding: 1.4rem 3.5rem !important;
-  font-weight: 900 !important;
-  font-size: 12px !important;
-  text-transform: uppercase !important;
-  border-radius: 6px !important;
-  cursor: pointer !important;
+  transition: transform 0.3s;
 }
 
-.secondary-action {
-  background: transparent !important;
-  color: var(--color-void) !important;
-  border: 2px solid var(--color-void) !important;
-  padding: 1.4rem 3.5rem !important;
-  font-weight: 900 !important;
-  font-size: 12px !important;
-  text-transform: uppercase !important;
-  border-radius: 6px !important;
-  cursor: pointer !important;
+.btn-black { background: var(--color-ink) !important; color: #fff !important; }
+.btn-outline { background: #fff !important; color: var(--color-ink) !important; border: 2px solid var(--color-ink) !important; }
+
+.btn-main:hover { transform: translateY(-4px); }
+
+/* SKILLS COLORIZED */
+.skills-section {
+  padding: 10rem 0 !important;
+  border-top: 1px solid var(--color-border) !important;
 }
 
-/* SKILLS SOVEREIGN */
-.master-skills {
-  padding: 15rem 0 !important;
-  background: #fff !important;
-  border-top: 1px solid var(--color-dim) !important;
-}
-
-.skill-section-title {
-  font-size: 4rem !important;
+.section-label {
+  font-size: 3rem !important;
   font-weight: 950 !important;
+  margin-bottom: 6rem !important;
   text-align: center !important;
-  margin-bottom: 8rem !important;
-  color: var(--color-void) !important;
 }
 
-.master-grid {
+.skills-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
   gap: 3rem !important;
 }
 
-.premium-card {
-  padding: 4rem !important;
-  background: var(--color-platinum) !important;
-  border: 1px solid var(--color-dim) !important;
+.skill-category-card {
+  padding: 3rem !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 12px !important;
-  transition: transform 0.3s !important;
+  background: #fafafa !important;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-.premium-card:hover { transform: translateY(-15px) !important; }
+.skill-category-card:hover { transform: translateY(-10px); border-color: var(--color-primary); }
 
-.card-label {
-  font-size: 1rem !important;
+.category-name {
+  font-size: 0.9rem !important;
   font-weight: 950 !important;
   text-transform: uppercase !important;
-  color: var(--color-void) !important;
   margin-bottom: 2rem !important;
   display: block !important;
 }
 
-.pill-container {
+.pills-box {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 1rem !important;
+  gap: 0.8rem !important;
 }
 
-.skill-pill {
+.pill {
   font-size: 11px !important;
   font-weight: 800 !important;
-  padding: 0.6rem 1.2rem !important;
+  padding: 0.5rem 1rem !important;
   background: #fff !important;
-  border: 1px solid var(--color-dim) !important;
-  color: var(--color-void) !important;
-  text-transform: uppercase !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-muted) !important;
+  border-radius: 5px !important;
+  transition: all 0.3s;
 }
+
+/* BRAND COLORS FOR SKILLS */
+.pill:hover { background: var(--color-ink); color: #fff; }
+
+.pill-js:hover { border-color: #f7df1e !important; color: #f7df1e !important; }
+.pill-ts:hover { border-color: #3178c6 !important; color: #3178c6 !important; }
+.pill-react:hover { border-color: #61dafb !important; color: #61dafb !important; }
+.pill-angular:hover { border-color: #dd0031 !important; color: #dd0031 !important; }
+.pill-node:hover { border-color: #339933 !important; color: #339933 !important; }
+.pill-nest:hover { border-color: #e0234e !important; color: #e0234e !important; }
+.pill-docker:hover { border-color: #2496ed !important; color: #2496ed !important; }
+.pill-k8s:hover { border-color: #326ce5 !important; color: #326ce5 !important; }
+.pill-go:hover { border-color: #00add8 !important; color: #00add8 !important; }
+.pill-python:hover { border-color: #3776ab !important; color: #3776ab !important; }
+.pill-flutter:hover { border-color: #02569b !important; color: #02569b !important; }
+.pill-php:hover { border-color: #777bb4 !important; color: #777bb4 !important; }

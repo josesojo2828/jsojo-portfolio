@@ -1,21 +1,19 @@
-<div class="scene-bg"></div>
-
 <header id="master-nav">
   <div class="container nav-content">
     <div class="branding">
       <span class="branding-name">Jose Sojo</span>
-      <span class="branding-title">Software Architect</span>
+      <span class="branding-title">Web Architect</span>
     </div>
     
     <nav style="display: flex; align-items: center;">
-      <ul class="link-list">
+      <ul class="nav-links">
         <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
         <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
         <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
       </ul>
-      <div class="language-switch">
-        <span class="lang-option" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-        <span class="lang-option" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+      <div class="language-selector">
+        <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
+        <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
       </div>
       <a href="#contact" class="contact-btn">{{ 'NAV.CONTACT' | translate }}</a>
     </nav>
@@ -23,53 +21,83 @@
 </header>
 
 <main>
-  <section class="master-hero">
+  <!-- Hero White Canvas -->
+  <section class="hero-section">
     <div class="container">
-      <h1 class="hero-main-title" [innerHTML]="'HERO.TITLE' | translate"></h1>
-      <p class="hero-desc">{{ 'HERO.DESCRIPTION' | translate }}</p>
+      <h1 class="hero-title" [innerHTML]="'HERO.TITLE' | translate"></h1>
+      <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
       
-      <div class="hero-btns">
-        <button class="primary-action">{{ 'HERO.CTA_WORK' | translate }}</button>
-        <button class="secondary-action">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
+      <div class="hero-actions">
+        <button class="btn-main btn-black">{{ 'HERO.CTA_WORK' | translate }}</button>
+        <button class="btn-main btn-outline">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="master-skills">
+  <!-- Skills Colorized -->
+  <section id="skills" class="skills-section">
     <div class="container">
-      <h2 class="skill-section-title">Technological Intelligence</h2>
+      <h2 class="section-label">Selected Tech Stack</h2>
 
-      <div class="master-grid">
-        <div class="premium-card">
-          <span class="card-label">User Experience</span>
-          <div class="pill-container">
-            <span class="skill-pill">TypeScript</span>
-            <span class="skill-pill">Angular</span>
-            <span class="skill-pill">React</span>
-            <span class="skill-pill">Next.js</span>
-            <span class="skill-pill">Tailwind</span>
+      <div class="skills-grid">
+        <!-- Frontend Excellence -->
+        <div class="skill-category-card">
+          <span class="category-name">Frontend Engineering</span>
+          <div class="pills-box">
+            <span class="pill pill-js">JavaScript</span>
+            <span class="pill pill-ts">TypeScript</span>
+            <span class="pill pill-angular">Angular</span>
+            <span class="pill pill-react">React</span>
+            <span class="pill">Next.js</span>
+            <span class="pill">TailwindCSS</span>
+            <span class="pill">Bootstrap</span>
+            <span class="pill">CSS / HTML</span>
           </div>
         </div>
 
-        <div class="premium-card">
-          <span class="card-label">System Architecture</span>
-          <div class="pill-container">
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">NestJS</span>
-            <span class="skill-pill">Go</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">Redis</span>
+        <!-- Backend Systems -->
+        <div class="skill-category-card">
+          <span class="category-name">System Design & Backend</span>
+          <div class="pills-box">
+            <span class="pill pill-node">Node.js</span>
+            <span class="pill pill-nest">NestJS</span>
+            <span class="pill">Express</span>
+            <span class="pill">Fastify</span>
+            <span class="pill pill-go">Go</span>
+            <span class="pill pill-python">FastAPI</span>
+            <span class="pill pill-php">PHP / Symfony</span>
+            <span class="pill">Python</span>
           </div>
         </div>
 
-        <div class="premium-card">
-          <span class="card-label">Cloud & Infra</span>
-          <div class="pill-container">
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">Kubernetes</span>
-            <span class="skill-pill">CI/CD</span>
-            <span class="skill-pill">Prometheus</span>
-            <span class="skill-pill">Linux</span>
+        <!-- Data & Architecture -->
+        <div class="skill-category-card">
+          <span class="category-name">Data & Messaging</span>
+          <div class="pills-box">
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">Redis</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">Elasticsearch</span>
+            <span class="pill">MinIO</span>
+            <span class="pill">Firebase</span>
+          </div>
+        </div>
+
+        <!-- Cloud & Native -->
+        <div class="skill-category-card">
+          <span class="category-name">Cloud, DevOps & Mobile</span>
+          <div class="pills-box">
+            <span class="pill pill-docker">Docker</span>
+            <span class="pill pill-k8s">Kubernetes</span>
+            <span class="pill">CI/CD</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">Prometheus</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">Linux / Bash</span>
+            <span class="pill pill-flutter">Flutter</span>
+            <span class="pill">React Native</span>
           </div>
         </div>
       </div>
