@@ -1,27 +1,52 @@
-<main class="portfolio-container">
+<header class="navbar">
+  <div class="container nav-content">
+    <div class="logo">
+      <span class="text-accent">JS</span>.ARCH
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1 class="monolith-text display-hero">
-        Jose Sojo <span class="accent-slash">/</span> <br>
-        <span class="gradient-text">Software Architect</span> <br>
-        <span class="craftsman-text">& Digital Craftsman</span>
+    <div class="container hero-inner">
+      <div class="hero-chip">VERSION 1.0 // 2026</div>
+      <h1 class="hero-title">
+        Jose Sojo <br>
+        <span class="title-sub">Software Architect</span>
       </h1>
-      <p class="hero-subtitle">
-        Building scalable Angular architectures and cloud-native solutions with precision.
+      <p class="hero-description">
+        Crafting robust, high-performance web solutions with Angular and Cloud architectures. 
+        Focusing on precision, scalability, and technical integrity.
       </p>
-      
       <div class="hero-actions">
-        <button class="btn-primary glass-effect">
-          Let's build together
-          <span class="arrow">→</span>
-        </button>
+        <a href="#portfolio" class="btn-primary">Explore My Work</a>
+        <a href="#about" class="btn-secondary">Technical Philosophy</a>
       </div>
     </div>
-    
-    <!-- Abstract background elements to reinforce the "Architectural" feel -->
-    <div class="architectural-grid"></div>
-    <div class="glow-orb"></div>
+  </section>
+
+  <!-- Section Placeholders for Anchor Scrolling -->
+  <section id="skills" style="min-height: 50vh; padding-top: 100px; border-top: 1px solid var(--border-dim);">
+    <div class="container">
+      <h2 class="section-title">Core Competencies</h2>
+      <!-- To be implemented -->
+    </div>
+  </section>
+
+  <section id="portfolio" style="min-height: 50vh; padding-top: 100px; border-top: 1px solid var(--border-dim);">
+    <div class="container">
+      <h2 class="section-title">Selected Case Studies</h2>
+      <!-- To be implemented -->
+    </div>
   </section>
 
   <router-outlet></router-outlet>
