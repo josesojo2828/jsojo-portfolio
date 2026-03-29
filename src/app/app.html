@@ -4,90 +4,72 @@
   <div class="container nav-content">
     <div class="logo-lockup">
       <span class="logo-main">Jose Sojo</span>
-      <div class="logo-separator"></div>
-      <span class="logo-sub">Software Architect</span>
+      <span class="logo-sub">Architect</span>
     </div>
     
-    <nav>
+    <nav style="display: flex; align-items: center;">
       <ul class="nav-links">
         <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
         <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
         <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
-        <li class="lang-selector" style="font-size: 12px; font-weight: 900; display: flex; gap: 10px; border-left: 2px solid var(--color-border); padding-left: 20px; margin-left: 20px;">
-          <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-          <span style="opacity: 0.3">|</span>
-          <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
-        </li>
-        <li>
-          <a href="#contact" class="btn-contact-v4">{{ 'NAV.CONTACT' | translate }}</a>
-        </li>
       </ul>
+      <div class="lang-selector">
+        <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
+        <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+      </div>
+      <a href="#contact" class="btn-contact-v5" style="margin-left: 2rem;">{{ 'NAV.CONTACT' | translate }}</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section V4 Titanium -->
   <section class="hero">
-    <div class="container hero-inner">
-      <span class="hero-meta">{{ 'HERO.CHIP' | translate }}</span>
+    <div class="container">
       <h1 class="hero-heading" [innerHTML]="'HERO.TITLE' | translate"></h1>
       <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
       
       <div class="hero-actions">
-        <button class="btn-v4 btn-primary-v4">{{ 'HERO.CTA_WORK' | translate }}</button>
-        <button class="btn-v4 btn-secondary-v4">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
+        <button class="btn-v5 btn-primary-v5">{{ 'HERO.CTA_WORK' | translate }}</button>
+        <button class="btn-v5 btn-secondary-v5">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
       </div>
     </div>
   </section>
 
-  <!-- Skills V4 Titanium -->
-  <section id="skills" class="section-v4">
+  <section id="skills" class="section-v5">
     <div class="container">
-      <div class="v4-title-wrap">
-        <h2 class="v4-title">Engineering Intelligence</h2>
-      </div>
+      <h2 class="v5-title">Technological Stack</h2>
 
-      <div class="skills-grid-v4">
-        <!-- User Experience -->
-        <div class="skill-card-v4">
-          <span class="card-num-v4">01 //</span>
-          <h3 class="card-title-v4">User Experience</h3>
-          <div class="tag-cloud-v4">
-            <span class="tag-v4 tag-ts">TypeScript</span>
-            <span class="tag-v4 tag-angular">Angular</span>
-            <span class="tag-v4 tag-react">React</span>
-            <span class="tag-v4 tag-next">Next.js</span>
-            <span class="tag-v4 tag-js">JavaScript</span>
-            <span class="tag-v4">Tailwind</span>
+      <div class="skills-grid-v5">
+        <div class="skill-card-v5">
+          <h3 class="card-title-v5">Frontend Excellence</h3>
+          <div class="tag-cloud-v5">
+            <span class="tag-v5">TypeScript</span>
+            <span class="tag-v5">Angular</span>
+            <span class="tag-v5">React</span>
+            <span class="tag-v5">Next.js</span>
+            <span class="tag-v5">Tailwind</span>
           </div>
         </div>
 
-        <!-- System Architecture -->
-        <div class="skill-card-v4">
-          <span class="card-num-v4">02 //</span>
-          <h3 class="card-title-v4">System Architecture</h3>
-          <div class="tag-cloud-v4">
-            <span class="tag-v4 tag-node">Node.js</span>
-            <span class="tag-v4 tag-nest">NestJS</span>
-            <span class="tag-v4 tag-go">Go</span>
-            <span class="tag-v4 tag-python">FastAPI</span>
-            <span class="tag-v4">Kafka</span>
-            <span class="tag-v4">Redis</span>
+        <div class="skill-card-v5">
+          <h3 class="card-title-v5">System Architecture</h3>
+          <div class="tag-cloud-v5">
+            <span class="tag-v5">Node.js</span>
+            <span class="tag-v5">NestJS</span>
+            <span class="tag-v5">Go</span>
+            <span class="tag-v5">PostgreSQL</span>
+            <span class="tag-v5">Redis</span>
           </div>
         </div>
 
-        <!-- Cloud & Infra -->
-        <div class="skill-card-v4">
-          <span class="card-num-v4">03 //</span>
-          <h3 class="card-title-v4">Cloud & Infra</h3>
-          <div class="tag-cloud-v4">
-            <span class="tag-v4 tag-docker">Docker</span>
-            <span class="tag-v4 tag-k8s">Kubernetes</span>
-            <span class="tag-v4">CI/CD</span>
-            <span class="tag-v4">Jenkins</span>
-            <span class="tag-v4">Linux</span>
-            <span class="tag-v4">Grafana</span>
+        <div class="skill-card-v5">
+          <h3 class="card-title-v5">Infrastructure</h3>
+          <div class="tag-cloud-v5">
+            <span class="tag-v5">Docker</span>
+            <span class="tag-v5">Kubernetes</span>
+            <span class="tag-v5">CI/CD</span>
+            <span class="tag-v5">Prometheus</span>
+            <span class="tag-v5">Linux</span>
           </div>
         </div>
       </div>
