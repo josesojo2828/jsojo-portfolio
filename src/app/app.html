@@ -5,31 +5,32 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portafolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="nav-cta">Contacto</a></li>
+        <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
+        <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
+        <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
+        <li class="lang-selector">
+          <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
+          <span class="text-muted">/</span>
+          <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main>
+  <div class="hero-glow"></div>
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-chip">VERSION 1.0 // 2026</div>
-      <h1 class="hero-title">
-        Jose Sojo <br>
-        <span class="title-sub">Software Architect</span>
-      </h1>
-      <p class="hero-description">
-        Crafting robust, high-performance web solutions with Angular and Cloud architectures. 
-        Focusing on precision, scalability, and technical integrity.
-      </p>
+      <div class="hero-chip" [innerHTML]="'HERO.CHIP' | translate"></div>
+      <h1 class="hero-title" [innerHTML]="'HERO.TITLE' | translate"></h1>
+      <p class="hero-description">{{ 'HERO.DESCRIPTION' | translate }}</p>
+      
       <div class="hero-actions">
-        <a href="#portfolio" class="btn-primary">Explore My Work</a>
-        <a href="#about" class="btn-secondary">Technical Philosophy</a>
+        <a href="#portfolio" class="btn-primary">{{ 'HERO.CTA_WORK' | translate }}</a>
+        <a href="#about" class="btn-secondary">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</a>
       </div>
     </div>
   </section>
@@ -38,83 +39,72 @@
   <section id="skills" class="section-skills">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Core Competencies</h2>
-        <p class="section-subtitle">Categorized by architectural dimensions for maximum impact.</p>
+        <h2 class="section-title">{{ 'SKILLS.TITLE' | translate }}</h2>
+        <p class="section-subtitle">{{ 'SKILLS.SUBTITLE' | translate }}</p>
       </div>
 
       <div class="skills-grid">
         <!-- Category: Frontend -->
-        <div class="skill-category border-frontend">
-          <h3 class="category-title text-frontend">Frontend Powerhouse</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Frontend Powerhouse</h3>
           <div class="skill-tags">
-            <span class="tag-frontend">JavaScript</span> <span class="tag-frontend">TypeScript</span> 
-            <span class="tag-frontend">React</span> <span class="tag-frontend">Next.js</span> 
-            <span class="tag-frontend">Angular</span> <span class="tag-frontend">CSS3</span> 
-            <span class="tag-frontend">TailwindCSS</span> <span class="tag-frontend">Bootstrap</span>
+            <span class="tag-js">JavaScript</span> <span class="tag-ts">TypeScript</span> 
+            <span class="tag-react">React</span> <span class="tag-next">Next.js</span> 
+            <span class="tag-angular">Angular</span> <span class="tag-css">CSS3</span> 
+            <span class="tag-tailwindcss">TailwindCSS</span> <span class="tag-bootstrap">Bootstrap</span>
           </div>
         </div>
 
         <!-- Category: Mobile -->
-        <div class="skill-category border-mobile">
-          <h3 class="category-title text-mobile">Mobile Ecosystem</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Mobile Ecosystem</h3>
           <div class="skill-tags">
-            <span class="tag-mobile">React Native</span> <span class="tag-mobile">Flutter</span>
+            <span class="tag-react">React Native</span> <span class="tag-flutter">Flutter</span>
           </div>
         </div>
 
         <!-- Category: Backend -->
-        <div class="skill-category border-backend">
-          <h3 class="category-title text-backend">Backend & Runtimes</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Backend & Runtimes</h3>
           <div class="skill-tags">
-            <span class="tag-backend">Node.js</span> <span class="tag-backend">NestJS</span> 
-            <span class="tag-backend">Fastify</span> <span class="tag-backend">Express</span> 
-            <span class="tag-backend">Go</span> <span class="tag-backend">Python</span> 
-            <span class="tag-backend">FastAPI</span> <span class="tag-backend">PHP</span> 
-            <span class="tag-backend">Symfony</span>
+            <span class="tag-node">Node.js</span> <span class="tag-nest">NestJS</span> 
+            <span class="tag-nest">Fastify</span> <span class="tag-nest">Express</span> 
+            <span class="tag-go">Go</span> <span class="tag-python">Python</span> 
+            <span class="tag-fastapi">FastAPI</span> <span class="tag-php">PHP</span> 
+            <span class="tag-php">Symfony</span>
           </div>
         </div>
 
         <!-- Category: Data & Cache -->
-        <div class="skill-category border-data">
-          <h3 class="category-title text-data">Persistence & Cache</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Persistence & Cache</h3>
           <div class="skill-tags">
-            <span class="tag-data">PostgreSQL</span> <span class="tag-data">MySQL</span> 
-            <span class="tag-data">MongoDB</span> <span class="tag-data">Redis</span>
+            <span class="tag-postgres">PostgreSQL</span> <span class="tag-mysql">MySQL</span> 
+            <span class="tag-mongo">MongoDB</span> <span class="tag-redis">Redis</span>
           </div>
         </div>
 
         <!-- Category: Infra & Ops -->
-        <div class="skill-category border-infra">
-          <h3 class="category-title text-infra">Infrastructure & DevOps</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Infrastructure & DevOps</h3>
           <div class="skill-tags">
-            <span class="tag-infra">Docker</span> <span class="tag-infra">Kubernetes</span> 
-            <span class="tag-infra">CI/CD</span> <span class="tag-infra">Jenkins</span> 
-            <span class="tag-infra">Apache Kafka</span> <span class="tag-infra">Prometheus</span> 
-            <span class="tag-infra">Grafana</span> <span class="tag-infra">Elasticsearch</span> 
-            <span class="tag-infra">Linux</span> <span class="tag-infra">Bash</span> 
-            <span class="tag-infra">MinIO</span>
+            <span class="tag-docker">Docker</span> <span class="tag-k8s">Kubernetes</span> 
+            <span class="tag-jenkins">CI/CD</span> <span class="tag-jenkins">Jenkins</span> 
+            <span class="tag-kafka">Apache Kafka</span> <span class="tag-prom">Prometheus</span> 
+            <span class="tag-grafana">Grafana</span> <span class="tag-elastic">Elasticsearch</span> 
+            <span class="tag-linux">Linux</span> <span class="tag-bash">Bash</span> 
+            <span class="tag-minio">MinIO</span>
           </div>
         </div>
 
         <!-- Category: Platforms -->
-        <div class="skill-category border-tools">
-          <h3 class="category-title text-tools">Tools & Platforms</h3>
+        <div class="skill-category">
+          <h3 class="category-title">Tools & Platforms</h3>
           <div class="skill-tags">
-            <span class="tag-tools">Jira</span> <span class="tag-tools">Firebase</span>
+            <span class="tag-tools">Jira</span> <span class="tag-firebase">Firebase</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="section-portfolio">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Selected Case Studies</h2>
-        <p class="section-subtitle">Architectural solutions for complex digital challenges.</p>
-      </div>
-      <!-- To be implemented -->
     </div>
   </section>
 
