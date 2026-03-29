@@ -1,17 +1,19 @@
+<div class="scene-bg"></div>
+
 <header class="navbar">
   <div class="container nav-content">
-    <div class="logo">
-      <span class="text-accent">JS</span>.ARCH
+    <div class="logo-lockup">
+      <span class="logo-main">Jose Sojo</span>
+      <span class="logo-sub">Software Architect</span>
     </div>
+    
     <nav>
       <ul class="nav-links">
         <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
         <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
         <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
-        <li class="lang-selector">
-          <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-          <span class="text-muted">/</span>
-          <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
+        <li>
+          <a href="#contact" class="btn-contact">{{ 'NAV.ABOUT' | translate }}</a> <!-- Reemplazado por Contacto logicamente -->
         </li>
       </ul>
     </nav>
@@ -19,89 +21,68 @@
 </header>
 
 <main>
-  <div class="hero-glow"></div>
-  
-  <!-- Hero Section -->
+  <!-- Hero Section V3 -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-chip" [innerHTML]="'HERO.CHIP' | translate"></div>
-      <h1 class="hero-title" [innerHTML]="'HERO.TITLE' | translate"></h1>
-      <p class="hero-description">{{ 'HERO.DESCRIPTION' | translate }}</p>
+      <span class="hero-meta">{{ 'HERO.CHIP' | translate }}</span>
+      <h1 class="hero-heading">
+        <span>JOSE</span>
+        <span>SOJO</span>
+      </h1>
+      <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
       
       <div class="hero-actions">
-        <a href="#portfolio" class="btn-primary">{{ 'HERO.CTA_WORK' | translate }}</a>
-        <a href="#about" class="btn-secondary">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</a>
+        <button class="btn-v3 btn-primary-v3">{{ 'HERO.CTA_WORK' | translate }}</button>
+        <button class="btn-v3 btn-secondary-v3">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section-skills">
+  <!-- Skills V3 (Preview) -->
+  <section id="skills" class="section-v3">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{{ 'SKILLS.TITLE' | translate }}</h2>
-        <p class="section-subtitle">{{ 'SKILLS.SUBTITLE' | translate }}</p>
+      <div class="v3-title-wrap">
+        <span class="v3-pretitle">{{ 'SKILLS.TITLE' | translate }}</span>
+        <h2 class="v3-title">Technological Intelligence</h2>
       </div>
 
-      <div class="skills-grid">
-        <!-- Category: Frontend -->
-        <div class="skill-category">
-          <h3 class="category-title">Frontend Powerhouse</h3>
-          <div class="skill-tags">
-            <span class="tag-js">JavaScript</span> <span class="tag-ts">TypeScript</span> 
-            <span class="tag-react">React</span> <span class="tag-next">Next.js</span> 
-            <span class="tag-angular">Angular</span> <span class="tag-css">CSS3</span> 
-            <span class="tag-tailwindcss">TailwindCSS</span> <span class="tag-bootstrap">Bootstrap</span>
+      <div class="skills-grid-v3">
+        <!-- Frontend -->
+        <div class="skill-card-v3">
+          <span class="card-num">01</span>
+          <h3 class="card-title">User Experiences</h3>
+          <div class="tag-cloud">
+            <span class="tag-v3 tag-ts">TypeScript</span>
+            <span class="tag-v3 tag-angular">Angular</span>
+            <span class="tag-v3 tag-react">React</span>
+            <span class="tag-v3 tag-next">Next.js</span>
+            <span class="tag-v3 tag-js">JavaScript</span>
           </div>
         </div>
 
-        <!-- Category: Mobile -->
-        <div class="skill-category">
-          <h3 class="category-title">Mobile Ecosystem</h3>
-          <div class="skill-tags">
-            <span class="tag-react">React Native</span> <span class="tag-flutter">Flutter</span>
+        <!-- Backend -->
+        <div class="skill-card-v3">
+          <span class="card-num">02</span>
+          <h3 class="card-title">Core Engine</h3>
+          <div class="tag-cloud">
+            <span class="tag-v3 tag-node">Node.js</span>
+            <span class="tag-v3 tag-nest">NestJS</span>
+            <span class="tag-v3 tag-go">Go</span>
+            <span class="tag-v3 tag-ts">Fastify</span>
+            <span class="tag-v3 tag-js">Express</span>
           </div>
         </div>
 
-        <!-- Category: Backend -->
-        <div class="skill-category">
-          <h3 class="category-title">Backend & Runtimes</h3>
-          <div class="skill-tags">
-            <span class="tag-node">Node.js</span> <span class="tag-nest">NestJS</span> 
-            <span class="tag-nest">Fastify</span> <span class="tag-nest">Express</span> 
-            <span class="tag-go">Go</span> <span class="tag-python">Python</span> 
-            <span class="tag-fastapi">FastAPI</span> <span class="tag-php">PHP</span> 
-            <span class="tag-php">Symfony</span>
-          </div>
-        </div>
-
-        <!-- Category: Data & Cache -->
-        <div class="skill-category">
-          <h3 class="category-title">Persistence & Cache</h3>
-          <div class="skill-tags">
-            <span class="tag-postgres">PostgreSQL</span> <span class="tag-mysql">MySQL</span> 
-            <span class="tag-mongo">MongoDB</span> <span class="tag-redis">Redis</span>
-          </div>
-        </div>
-
-        <!-- Category: Infra & Ops -->
-        <div class="skill-category">
-          <h3 class="category-title">Infrastructure & DevOps</h3>
-          <div class="skill-tags">
-            <span class="tag-docker">Docker</span> <span class="tag-k8s">Kubernetes</span> 
-            <span class="tag-jenkins">CI/CD</span> <span class="tag-jenkins">Jenkins</span> 
-            <span class="tag-kafka">Apache Kafka</span> <span class="tag-prom">Prometheus</span> 
-            <span class="tag-grafana">Grafana</span> <span class="tag-elastic">Elasticsearch</span> 
-            <span class="tag-linux">Linux</span> <span class="tag-bash">Bash</span> 
-            <span class="tag-minio">MinIO</span>
-          </div>
-        </div>
-
-        <!-- Category: Platforms -->
-        <div class="skill-category">
-          <h3 class="category-title">Tools & Platforms</h3>
-          <div class="skill-tags">
-            <span class="tag-tools">Jira</span> <span class="tag-firebase">Firebase</span>
+        <!-- Infra -->
+        <div class="skill-card-v3">
+          <span class="card-num">03</span>
+          <h3 class="card-title">Infrastructure</h3>
+          <div class="tag-cloud">
+            <span class="tag-v3 tag-docker">Docker</span>
+            <span class="tag-v3 tag-k8s">Kubernetes</span>
+            <span class="tag-v3">Kafka</span>
+            <span class="tag-v3">CI/CD</span>
+            <span class="tag-v3">Linux</span>
           </div>
         </div>
       </div>

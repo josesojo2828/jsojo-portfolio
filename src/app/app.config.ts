@@ -9,7 +9,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 
 // Factory to load translation files
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './i18n/', '.json');
+  return new (TranslateHttpLoader as any)(http, './i18n/', '.json');
 }
 
 export const appConfig: ApplicationConfig = {
