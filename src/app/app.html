@@ -4,6 +4,7 @@
   <div class="container nav-content">
     <div class="logo-lockup">
       <span class="logo-main">Jose Sojo</span>
+      <div class="logo-separator"></div>
       <span class="logo-sub">Software Architect</span>
     </div>
     
@@ -12,13 +13,13 @@
         <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
         <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
         <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
-        <li class="lang-selector">
+        <li class="lang-selector" style="font-size: 12px; font-weight: 900; display: flex; gap: 10px; border-left: 2px solid var(--color-border); padding-left: 20px; margin-left: 20px;">
           <span class="lang-btn" [class.active]="activeLang() === 'es'" (click)="setLanguage('es')">ES</span>
-          <span style="color: rgba(255,255,255,0.2)">/</span>
+          <span style="opacity: 0.3">|</span>
           <span class="lang-btn" [class.active]="activeLang() === 'en'" (click)="setLanguage('en')">EN</span>
         </li>
         <li>
-          <a href="#contact" class="btn-contact">{{ 'NAV.CONTACT' | translate }}</a>
+          <a href="#contact" class="btn-contact-v4">{{ 'NAV.CONTACT' | translate }}</a>
         </li>
       </ul>
     </nav>
@@ -26,7 +27,7 @@
 </header>
 
 <main>
-  <!-- Hero Section V3 -->
+  <!-- Hero Section V4 Titanium -->
   <section class="hero">
     <div class="container hero-inner">
       <span class="hero-meta">{{ 'HERO.CHIP' | translate }}</span>
@@ -34,57 +35,59 @@
       <p class="hero-subtitle">{{ 'HERO.DESCRIPTION' | translate }}</p>
       
       <div class="hero-actions">
-        <button class="btn-v3 btn-primary-v3">{{ 'HERO.CTA_WORK' | translate }}</button>
-        <button class="btn-v3 btn-secondary-v3">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
+        <button class="btn-v4 btn-primary-v4">{{ 'HERO.CTA_WORK' | translate }}</button>
+        <button class="btn-v4 btn-secondary-v4">{{ 'HERO.CTA_PHILOSOPHY' | translate }}</button>
       </div>
     </div>
   </section>
 
-  <!-- Skills V3 -->
-  <section id="skills" class="section-v3">
+  <!-- Skills V4 Titanium -->
+  <section id="skills" class="section-v4">
     <div class="container">
-      <div class="v3-title-wrap">
-        <span class="v3-pretitle">{{ 'SKILLS.TITLE' | translate }}</span>
-        <h2 class="v3-title">Technological Intelligence</h2>
+      <div class="v4-title-wrap">
+        <h2 class="v4-title">Engineering Intelligence</h2>
       </div>
 
-      <div class="skills-grid-v3">
-        <!-- Frontend -->
-        <div class="skill-card-v3">
-          <span class="card-num">01</span>
-          <h3 class="card-title">User Experiences</h3>
-          <div class="tag-cloud">
-            <span class="tag-v3 tag-ts">TypeScript</span>
-            <span class="tag-v3 tag-angular">Angular</span>
-            <span class="tag-v3 tag-react">React</span>
-            <span class="tag-v3 tag-next">Next.js</span>
-            <span class="tag-v3 tag-js">JavaScript</span>
+      <div class="skills-grid-v4">
+        <!-- User Experience -->
+        <div class="skill-card-v4">
+          <span class="card-num-v4">01 //</span>
+          <h3 class="card-title-v4">User Experience</h3>
+          <div class="tag-cloud-v4">
+            <span class="tag-v4 tag-ts">TypeScript</span>
+            <span class="tag-v4 tag-angular">Angular</span>
+            <span class="tag-v4 tag-react">React</span>
+            <span class="tag-v4 tag-next">Next.js</span>
+            <span class="tag-v4 tag-js">JavaScript</span>
+            <span class="tag-v4">Tailwind</span>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="skill-card-v3">
-          <span class="card-num">02</span>
-          <h3 class="card-title">Core Engine</h3>
-          <div class="tag-cloud">
-            <span class="tag-v3 tag-node">Node.js</span>
-            <span class="tag-v3 tag-nest">NestJS</span>
-            <span class="tag-v3 tag-go">Go</span>
-            <span class="tag-v3 tag-ts">Fastify</span>
-            <span class="tag-v3 tag-js">Express</span>
+        <!-- System Architecture -->
+        <div class="skill-card-v4">
+          <span class="card-num-v4">02 //</span>
+          <h3 class="card-title-v4">System Architecture</h3>
+          <div class="tag-cloud-v4">
+            <span class="tag-v4 tag-node">Node.js</span>
+            <span class="tag-v4 tag-nest">NestJS</span>
+            <span class="tag-v4 tag-go">Go</span>
+            <span class="tag-v4 tag-python">FastAPI</span>
+            <span class="tag-v4">Kafka</span>
+            <span class="tag-v4">Redis</span>
           </div>
         </div>
 
-        <!-- Infra -->
-        <div class="skill-card-v3">
-          <span class="card-num">03</span>
-          <h3 class="card-title">Infrastructure</h3>
-          <div class="tag-cloud">
-            <span class="tag-v3 tag-docker">Docker</span>
-            <span class="tag-v3 tag-k8s">Kubernetes</span>
-            <span class="tag-v3">Kafka</span>
-            <span class="tag-v3">CI/CD</span>
-            <span class="tag-v3">Linux</span>
+        <!-- Cloud & Infra -->
+        <div class="skill-card-v4">
+          <span class="card-num-v4">03 //</span>
+          <h3 class="card-title-v4">Cloud & Infra</h3>
+          <div class="tag-cloud-v4">
+            <span class="tag-v4 tag-docker">Docker</span>
+            <span class="tag-v4 tag-k8s">Kubernetes</span>
+            <span class="tag-v4">CI/CD</span>
+            <span class="tag-v4">Jenkins</span>
+            <span class="tag-v4">Linux</span>
+            <span class="tag-v4">Grafana</span>
           </div>
         </div>
       </div>
