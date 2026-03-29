@@ -1,0 +1,97 @@
+.portfolio-container {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 10;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.display-hero {
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.9;
+  margin-bottom: 2rem;
+}
+
+.accent-slash {
+  color: var(--primary-violet);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--text-on-bg), var(--primary-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-violet);
+  color: white;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px var(--primary-violet-glass);
+}
+
+.btn-primary .arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Background effects */
+.architectural-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90 binary_search(rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  pointer-events: none;
+}
+
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary-violet-glass) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+}

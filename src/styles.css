@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  /* Obsidian Architect Tokens */
+  --bg-primary: #131313;
+  --bg-surface: #1f1f1f;
+  --primary-violet: #8B5CF6;
+  --primary-violet-glass: rgba(139, 92, 246, 0.4);
+  --text-on-bg: #e2e2e2;
+  --text-muted: #cbc3d7;
+  
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-on-bg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.monolith-text {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism primitives */
+.glass-card {
+  background: rgba(31, 31, 31, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}

@@ -1,0 +1,8 @@
+services:
+  portfolio:
+    build: .
+    image: jsojo-portfolio:latest
+    container_name: jsojo-portfolio-app
+    ports:
+      - "4000:4000"
+    restart: always
