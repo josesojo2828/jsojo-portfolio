@@ -87,9 +87,9 @@ export class App implements OnInit {
 
   private updateSeo() {
     this.seo.updateTags({
-      title: 'Jose Sojo | Arquitecto de Software & Artesano Digital',
-      description: 'Senior Software Architect especializado en arquitecturas Angular escalables y soluciones cloud-native.',
-      keywords: 'Angular, Arquitectura, Ingeniero de Software, Cloud-native, K8s, TypeScript'
+      title: 'Jose Sojo | Arquitecto de Software Senior & Lead Engineer',
+      description: 'Especialista en Arquitectura de Software, Cloud-Native, Microservicios y Ecosistemas SaaS de alta escalabilidad. Experto en Angular, NestJS, Go y Kubernetes.',
+      keywords: 'Architect, Software Engineering, Lead Engineer, Angular 19, NestJS, GoLang, Kubernetes, Docker, FinTech Architecture, SaaS Development, IoT Data, Enterprise Solutions, Jose Sojo'
     });
   }
 }

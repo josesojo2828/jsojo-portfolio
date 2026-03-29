@@ -267,9 +267,9 @@ nav { display: flex !important; align-items: center !important; gap: 4rem !impor
   background: var(--color-electric); color: #fff; border: none;
   padding: 0.6rem 2.5rem 0.6rem 0.6rem; border-radius: 100px;
   display: flex; align-items: center; gap: 1.5rem;
-  font-weight: 950; font-size: 12px; letter-spacing: 0.1em;
+  font-weight: 950; font-size: 11px; letter-spacing: 0.1em;
   cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  width: fit-content;
+  width: fit-content; margin: 0 auto;
 }
 
 .arrow-circle {
@@ -280,6 +280,32 @@ nav { display: flex !important; align-items: center !important; gap: 4rem !impor
 
 .action-arrow-btn:hover { transform: translateX(8px); background: var(--color-deep); }
 .action-arrow-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Pulse Animation when sending */
+@keyframes send-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+  50% { transform: scale(0.95); box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
+  100% { transform: scale(1); }
+}
+.action-arrow-btn.is-sending {
+  animation: send-pulse 1.5s infinite ease-in-out;
+  background: var(--color-deep);
+}
+
+/* POWER SOCIAL ROW */
+.social-power-row { display: flex; gap: 1.5rem; }
+.power-icon {
+  width: 55px; height: 55px; background: #0c1021; border-radius: 14px;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  color: #fff; text-decoration: none; transition: all 0.4s;
+  box-shadow: 0 10px 30px rgba(12, 16, 33, 0.1); border: 1px solid rgba(255,255,255,0.05);
+}
+
+.power-icon:hover {
+  background: var(--color-electric); color: #fff;
+  transform: translateY(-8px) rotate(8deg);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
 
 .social-pill:hover { background: var(--color-deep); color: #fff; transform: translateY(-3px); }
 
