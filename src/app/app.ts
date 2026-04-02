@@ -16,7 +16,8 @@ export class App implements OnInit {
   private readonly translate = inject(TranslateService);
   private readonly seo = inject(SeoService);
 
-  // Form Signals
+  // Theme & Form Signals
+  isDarkMode = signal(true);
   formData = {
     name: signal(''),
     email: signal(''),
@@ -30,6 +31,28 @@ export class App implements OnInit {
     this.translate.setDefaultLang('es');
     this.translate.use('es');
     this.updateSeo();
+    this.initTheme();
+  }
+
+  private initTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      this.isDarkMode.set(saved === 'dark');
+    } else {
+      this.isDarkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+    this.applyTheme();
+  }
+
+  toggleTheme() {
+    this.isDarkMode.set(!this.isDarkMode());
+    this.applyTheme();
+    localStorage.setItem('theme', this.isDarkMode() ? 'dark' : 'light');
+  }
+
+  private applyTheme() {
+    const theme = this.isDarkMode() ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
   }
 
   /**
