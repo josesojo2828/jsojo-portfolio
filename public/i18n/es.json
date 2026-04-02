@@ -1,19 +1,84 @@
 {
   "NAV": {
-    "SKILLS": "Habilidades",
-    "PORTFOLIO": "Portafolio",
-    "ABOUT": "Sobre mí",
-    "CONTACT": "Contacto"
+    "PROJECTS": "PROYECTOS",
+    "SKILLS": "TECNOLOGÍAS",
+    "CONTACT": "CONTACTO",
+    "COLABORATE": "COLABORAR"
   },
   "HERO": {
-    "CHIP": "",
-    "TITLE": "<span>JOSE</span> <span>SOJO</span>",
-    "DESCRIPTION": "Construyendo arquitecturas digitales de alto rendimiento con foco en escalabilidad e ingeniería moderna.",
-    "CTA_WORK": "Explorar mi trabajo",
-    "CTA_PHILOSOPHY": "Filosofía Técnica"
+    "LABEL": "Software Architect",
+    "TITLE": "Resuelvo hoy,",
+    "TITLE_SPAN": "mañana no te detienes.",
+    "DESCRIPTION": "Especialista en ecosistemas distribuidos, sistemas financieros y alto tráfico. Transformo la complejidad técnica en infraestructuras resilientes."
   },
   "SKILLS": {
-    "TITLE": "Competencias Core",
-    "SUBTITLE": "Stack tecnológico categorizado con precisión arquitectónica."
-  }
+    "TITLE": "Ecosistema Tecnológico",
+    "FRONTEND": "Front-end Engine",
+    "BACKEND": "Back-end & Systems",
+    "MOBILE": "Mobile Architecture",
+    "INFRA": "Cloud & Infrastructure"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portafolio",
+    "VIEW_SYSTEM": "Lanzar Sistema →",
+    "NUTRINGEST": {
+      "NAME": "Nutringest SaaS",
+      "SUMMARY": "Arquitectura Multi-tenant escalable para gestión clínica masiva y cumplimiento de datos."
+    },
+    "CRONOBYKE": {
+      "NAME": "CronoByke IoT",
+      "SUMMARY": "Motor de procesamiento de telemetría IoT en tiempo real y sincronización de baja latencia."
+    },
+    "RINDEMAS": {
+      "NAME": "Rinde+ FinTech",
+      "SUMMARY": "Ecosistema distribuido para centralización inteligente de costos y analítica financiera."
+    },
+    "TALLERES": {
+      "NAME": "Talleres ERP",
+      "SUMMARY": "Plataforma de optimización operativa para la automatización masiva de flujos industriales."
+    },
+    "APEXDRIVE": {
+      "NAME": "ApexDrive Logistics",
+      "SUMMARY": "Service Mesh de logística basada en eventos sobre Kubernetes y flujos AWS Kinesis."
+    },
+    "SPEEDDELIVERY": {
+      "NAME": "SpeedDelivery SaaS",
+      "SUMMARY": "Despachador hiperlocal de baja latencia con geolocalización en tiempo real."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Let's build together.",
+    "DESCRIPTION": "Hablemos de cómo transformar tus desafíos técnicos en una infraestructura escalable.",
+    "COPIED": "¡COPIADO!",
+    "FORM": {
+      "NAME": "Nombre",
+      "EMAIL": "E-mail",
+      "MESSAGE": "Contame tu desafío técnico",
+      "PROJECT_TYPE": {
+        "LABEL": "¿En qué proyecto estás trabajando?",
+        "SAAS": "SaaS / Plataforma",
+        "MOBILE": "App Mobile",
+        "ECOMMERCE": "E-commerce",
+        "FINTECH": "FinTech / Web3",
+        "INFRA": "Infra / DevOps",
+        "OTHER": "Corporativo / Otro"
+      },
+      "BUDGET": {
+        "LABEL": "Rango de inversión estimado",
+        "TIER1": "Bajo $3k",
+        "TIER2": "$3k - $10k",
+        "TIER3": "$10k - $25k",
+        "TIER4": "Sobre $25k",
+        "TIER5": "Sociedad"
+      },
+      "SUBMIT": "ENVIAR PROPUESTA",
+      "SENDING": "ENVIANDO...",
+      "SUCCESS": "Mensaje enviado con éxito. Me pondré en contacto pronto."
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2024 JOSE SOJO.",
+    "SUBTITLE": "SOFTWARE ARCHITECT PORTFOLIO."
+  },
+  "WA_ARIA": "Chat on WhatsApp"
 }

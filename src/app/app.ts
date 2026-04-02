@@ -21,26 +21,47 @@ export class App implements OnInit {
 
   // Theme & Form Signals
   isDarkMode = signal(true);
+  currentLang = signal('es');
   formData = {
     name: signal(''),
     email: signal(''),
-    message: signal('')
+    message: signal(''),
+    projectType: signal('SAAS'),
+    budget: signal('TIER2')
   };
   
   isSending = signal(false);
   sentSuccess = signal(false);
 
   constructor() {
-    // browser-only initialization
     afterNextRender(() => {
       this.initTheme();
+      this.initLang();
     });
   }
 
   ngOnInit() {
-    this.translate.setDefaultLang('es');
-    this.translate.use('es');
     this.updateSeo();
+  }
+
+  private initLang() {
+    if (this.isBrowser) {
+      const saved = localStorage.getItem('lang') || 'es';
+      this.currentLang.set(saved);
+      this.translate.setDefaultLang(saved);
+      this.translate.use(saved);
+    } else {
+      this.translate.setDefaultLang('es');
+      this.translate.use('es');
+    }
+  }
+
+  changeLang(lang: string) {
+    this.currentLang.set(lang);
+    this.translate.use(lang);
+    if (this.isBrowser) {
+      localStorage.setItem('lang', lang);
+    }
   }
 
   private initTheme() {
@@ -68,6 +89,14 @@ export class App implements OnInit {
     }
   }
 
+  setProjectType(type: string): void {
+    this.formData.projectType.set(type);
+  }
+
+  setBudget(tier: string): void {
+    this.formData.budget.set(tier);
+  }
+
   /**
    * 🛡️ SECURE SUBMISSION:
    * Calls the local Express Proxy API /api/contact instead of Telegram Bot API directly.
@@ -80,7 +109,9 @@ export class App implements OnInit {
     const data = {
       name: this.formData.name(),
       email: this.formData.email(),
-      message: this.formData.message()
+      message: this.formData.message(),
+      projectType: this.formData.projectType(),
+      budget: this.formData.budget()
     };
 
     try {
@@ -96,6 +127,8 @@ export class App implements OnInit {
         this.formData.name.set('');
         this.formData.email.set('');
         this.formData.message.set('');
+        this.formData.projectType.set('SAAS');
+        this.formData.budget.set('TIER2');
         setTimeout(() => this.sentSuccess.set(false), 5000);
       }
     } catch (error) {

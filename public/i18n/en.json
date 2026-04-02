@@ -1,19 +1,84 @@
 {
   "NAV": {
-    "SKILLS": "Skills",
-    "PORTFOLIO": "Portfolio",
-    "ABOUT": "About",
-    "CONTACT": "Contact"
+    "PROJECTS": "PROJECTS",
+    "SKILLS": "TECHNOLOGIES",
+    "CONTACT": "CONTACT",
+    "COLABORATE": "COLLABORATE"
   },
   "HERO": {
-    "CHIP": "VERSION 1.0 // 2026",
-    "TITLE": "<span>JOSE</span> <span>SOJO</span>",
-    "DESCRIPTION": "Leading high-performance digital architectures with a focus on scalability and modern engineering.",
-    "CTA_WORK": "Explore My Work",
-    "CTA_PHILOSOPHY": "Technical Philosophy"
+    "LABEL": "Software Architect",
+    "TITLE": "Solving for today,",
+    "TITLE_SPAN": "unstoppable tomorrow.",
+    "DESCRIPTION": "Specialist in distributed ecosystems, financial systems, and high traffic. I transform technical complexity into resilient infrastructures."
   },
   "SKILLS": {
-    "TITLE": "Core Competencies",
-    "SUBTITLE": "Technological stack categorized with architectural precision."
-  }
+    "TITLE": "Technological Ecosystem",
+    "FRONTEND": "Front-end Engine",
+    "BACKEND": "Back-end & Systems",
+    "MOBILE": "Mobile Architecture",
+    "INFRA": "Cloud & Infrastructure"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "VIEW_SYSTEM": "Launch System →",
+    "NUTRINGEST": {
+      "NAME": "Nutringest SaaS",
+      "SUMMARY": "Scalable Multi-tenant architecture for massive clinical management and data compliance."
+    },
+    "CRONOBYKE": {
+      "NAME": "CronoByke IoT",
+      "SUMMARY": "Real-time IoT telemetry processing engine with low-latency synchronization."
+    },
+    "RINDEMAS": {
+      "NAME": "Rinde+ FinTech",
+      "SUMMARY": "Distributed ecosystem for intelligent cost centralization and financial analytics."
+    },
+    "TALLERES": {
+      "NAME": "Talleres ERP",
+      "SUMMARY": "Operational optimization platform for massive automation of industrial workflows."
+    },
+    "APEXDRIVE": {
+      "NAME": "ApexDrive Logistics",
+      "SUMMARY": "Event-driven logistics Service Mesh over Kubernetes and AWS Kinesis streams."
+    },
+    "SPEEDDELIVERY": {
+      "NAME": "SpeedDelivery SaaS",
+      "SUMMARY": "Low-latency hyperlocal dispatcher with real-time geolocation."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Let's build together.",
+    "DESCRIPTION": "Let's talk about how to transform your technical challenges into a scalable infrastructure.",
+    "COPIED": "COPIED!",
+    "FORM": {
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "MESSAGE": "Tell me about your technical challenge",
+      "PROJECT_TYPE": {
+        "LABEL": "What project are you working on?",
+        "SAAS": "SaaS / Platform",
+        "MOBILE": "Mobile App",
+        "ECOMMERCE": "E-commerce",
+        "FINTECH": "FinTech / Web3",
+        "INFRA": "Infra / DevOps",
+        "OTHER": "Corporate / Other"
+      },
+      "BUDGET": {
+        "LABEL": "Estimated investment range",
+        "TIER1": "Under $3k",
+        "TIER2": "$3k - $10k",
+        "TIER3": "$10k - $25k",
+        "TIER4": "Over $25k",
+        "TIER5": "Partnership"
+      },
+      "SUBMIT": "SUBMIT PROPOSAL",
+      "SENDING": "SENDING...",
+      "SUCCESS": "Message sent successfully. I will get in touch soon."
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2024 JOSE SOJO.",
+    "SUBTITLE": "SOFTWARE ARCHITECT PORTFOLIO."
+  },
+  "WA_ARIA": "Chat on WhatsApp"
 }
