@@ -1,4 +1,5 @@
-import { Component, signal, inject, OnInit } from '@angular/core';
+import { Component, signal, inject, OnInit, PLATFORM_ID, afterNextRender } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,8 @@ export class App implements OnInit {
   protected readonly title = signal('jsojo-portfolio');
   private readonly translate = inject(TranslateService);
   private readonly seo = inject(SeoService);
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly isBrowser = isPlatformBrowser(this.platformId);
 
   // Theme & Form Signals
   isDarkMode = signal(true);
@@ -27,11 +30,17 @@ export class App implements OnInit {
   isSending = signal(false);
   sentSuccess = signal(false);
 
+  constructor() {
+    // browser-only initialization
+    afterNextRender(() => {
+      this.initTheme();
+    });
+  }
+
   ngOnInit() {
     this.translate.setDefaultLang('es');
     this.translate.use('es');
     this.updateSeo();
-    this.initTheme();
   }
 
   private initTheme() {
@@ -47,12 +56,16 @@ export class App implements OnInit {
   toggleTheme() {
     this.isDarkMode.set(!this.isDarkMode());
     this.applyTheme();
-    localStorage.setItem('theme', this.isDarkMode() ? 'dark' : 'light');
+    if (this.isBrowser) {
+      localStorage.setItem('theme', this.isDarkMode() ? 'dark' : 'light');
+    }
   }
 
   private applyTheme() {
-    const theme = this.isDarkMode() ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', theme);
+    if (this.isBrowser) {
+      const theme = this.isDarkMode() ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    }
   }
 
   /**
@@ -60,8 +73,8 @@ export class App implements OnInit {
    * Calls the local Express Proxy API /api/contact instead of Telegram Bot API directly.
    * This protects the Bot Token and Chat ID.
    */
-  async sendToTelegram(event: Event) {
-    event.preventDefault();
+  async sendEmail(event?: Event) {
+    if (event) event.preventDefault();
     this.isSending.set(true);
 
     const data = {
